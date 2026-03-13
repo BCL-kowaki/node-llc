@@ -68,7 +68,7 @@ export default function AccessSection() {
             <dt className="md:w-48 text-white/50 text-sm tracking-wider shrink-0">
               資本金
             </dt>
-            <dd className="text-white text-base">100万円</dd>
+            <dd className="text-white text-base">1,000,000円</dd>
           </div>
           <div className="flex flex-col md:flex-row gap-2 md:gap-8 py-4 border-b border-white/10">
             <dt className="md:w-48 text-white/50 text-sm tracking-wider shrink-0">
@@ -170,15 +170,17 @@ export default function AccessSection() {
                 退社後、そのシステムは全社展開されるまでに至る。
               </p>
               <p>
-                その後WEB業界に転身。サイト制作、動画編集、広告運用、
+                その後Web業界に転身。Webサイト制作、DTP、動画編集・撮影、
+                Webマーケティングや広告運用代行、システムや独自アプリ開発、
                 Salesforceによる社内インフラ構築など、
                 10年以上にわたりデジタルの現場で経験を積む。
               </p>
               <p>
                 「現場の悩みを、仕組みで解決する」。
-                キャリアを通じて抱き続けたこの想いは、
-                生成AIの出現によって、より大きなスケールで実現できるようになった。
-                その確信が、nodeの原点です。
+                キャリアを通じて抱き続けたこの想いは、生成AIの出現によって、
+                より大きなスケールで実現できるようになった。
+                その確信がnodeの原点です。
+                AI活用を通じて、より多くの人に価値を届けたいと考え、nodeを設立しました。
               </p>
             </div>
           </div>
