@@ -17,8 +17,8 @@ const works: { title: string; icon: IconDefinition }[] = [
   { title: "CRM\nプラットフォーム構築", icon: faUsers },
   { title: "営業マネジメント\nインフラ構築", icon: faBriefcase },
   { title: "広告一元管理\nプラットフォーム構築", icon: faBullhorn },
-  { title: "会員向け動画配信\nプラットフォーム構築", icon: faVideo },
-  { title: "会員向け\nライブストリーミング\nプラットフォーム構築", icon: faTowerBroadcast },
+  { title: "動画配信\nプラットフォーム構築", icon: faVideo },
+  { title: "LiveStreaming\nプラットフォーム構築", icon: faTowerBroadcast },
   { title: "情報配信\nプラットフォーム構築", icon: faNewspaper },
   { title: "SEO対策\nプラットフォーム構築", icon: faMagnifyingGlass },
 ];
