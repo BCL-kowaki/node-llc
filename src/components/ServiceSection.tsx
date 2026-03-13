@@ -43,26 +43,24 @@ export default function ServiceSection() {
           {/* Left: Description */}
           <div className="lg:w-1/2">
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-relaxed mb-8">
-              AIの変革がビジネスの
+              企画から運用まで、
               <br />
-              可能性を切り拓く。
+              一気通貫で。
             </h3>
             <div className="space-y-5 text-base md:text-lg text-white/75 leading-relaxed">
-              <p>AIの導入だけがわたしたちのゴールではありません。</p>
               <p>
-                生成AIやLLMが急速に進化する今日、
-                AI技術を正しく理解し、ビジネスに実装することが、
-                企業の競争力を左右する時代が到来しています。
+                AIを導入したい。でも、何から始めればいいかわからない。
+                そんなご相談をよくいただきます。
               </p>
               <p>
-                AIエージェント、業務自動化、データ活用、
-                デジタルコンテンツ制作から人材育成まで。
+                nodeは企画・設計・開発・運用・教育まで、
+                すべてワンストップで対応します。
+                部分的なサポートも、もちろん可能です。
               </p>
               <p>
-                わたしたちは、AI技術のあらゆる側面から
-                お客様のビジネス変革を支援します。
+                必要なのは「相談してみよう」という一歩だけ。
+                あとはわたしたちが一緒に考えます。
               </p>
-              <p>共にAIの力で、ビジネスの未来を創造し続けます。</p>
             </div>
           </div>
 

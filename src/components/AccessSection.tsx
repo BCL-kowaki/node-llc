@@ -6,7 +6,7 @@ import FadeUpSection from "./FadeUpSection";
 
 export default function AccessSection() {
   return (
-    <FadeUpSection id="access" className="py-24 md:py-32">
+    <FadeUpSection id="access" className="min-h-screen flex items-start py-24 md:py-32 overflow-y-auto">
       <div className="w-[90%] max-w-6xl mx-auto">
         <div className="mb-12">
           <h2
@@ -19,7 +19,7 @@ export default function AccessSection() {
         </div>
 
         <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-relaxed mb-12">
-          会社情報
+          福岡から、全国へ。
         </h3>
 
         {/* Map */}
@@ -143,15 +143,22 @@ export default function AccessSection() {
             {/* Profile text */}
             <div className="space-y-5 text-base md:text-lg text-white/75 leading-relaxed">
               <p>
-                1987年生まれ、鹿児島県出身。
-                大手コールセンターにてマネージャーを経験したのち、WEB業界へ転身。
-                WEBサイト制作、動画編集、広告運用、Salesforceを活用した社内インフラシステム構築など、
-                10年以上にわたりデジタル領域の最前線で幅広い経験を積む。
+                1987年、鹿児島生まれ。
+                大手通信販売会社にてマネージャーとしてキャリアをスタート。
+                現場の課題に向き合うなかで、独自の業務改善ツールや効率化分析ツールを開発し、
+                課内のKPI向上を支える基盤システムを構築。
+                退社後、そのシステムは全社展開されるまでに至る。
               </p>
               <p>
-                近年の生成AI技術の急速な進化を機に、AI領域へと活動の幅を拡大。
-                これまで培ったデジタル実務のノウハウとAI技術を掛け合わせ、
-                企業のDX推進を支援するために合同会社nodeを設立。
+                その後WEB業界に転身。サイト制作、動画編集、広告運用、
+                Salesforceによる社内インフラ構築など、
+                10年以上にわたりデジタルの現場で経験を積む。
+              </p>
+              <p>
+                「現場の悩みを、仕組みで解決する」。
+                キャリアを通じて抱き続けたこの想いは、
+                生成AIの出現によって、より大きなスケールで実現できるようになった。
+                その確信が、nodeの原点です。
               </p>
             </div>
           </div>

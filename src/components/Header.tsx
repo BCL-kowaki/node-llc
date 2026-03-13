@@ -14,11 +14,13 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    const container = document.getElementById("snap-root");
+    if (!container) return;
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setScrolled(container.scrollTop > 50);
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    container.addEventListener("scroll", handleScroll);
+    return () => container.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {

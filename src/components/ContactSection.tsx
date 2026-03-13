@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import Link from "next/link";
 import FadeUpSection from "./FadeUpSection";
 
 export default function ContactSection() {
@@ -17,8 +18,8 @@ export default function ContactSection() {
   };
 
   return (
-    <FadeUpSection id="contact" className="min-h-screen flex items-center py-24 md:py-32">
-      <div className="w-[90%] max-w-6xl mx-auto">
+    <FadeUpSection id="contact" className="min-h-screen relative flex flex-col justify-center py-24 md:py-32">
+      <div className="w-[90%] max-w-6xl mx-auto flex-1 flex flex-col justify-center">
         <div className="mb-12">
           <h2
             className="text-sm tracking-[0.3em] text-white/50 uppercase mb-4"
@@ -33,11 +34,17 @@ export default function ContactSection() {
           {/* Left: Message */}
           <div className="lg:w-2/5">
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-relaxed mb-6">
-              お問い合わせ
+              まずは、ご相談から。
             </h3>
-            <p className="text-base md:text-lg text-white/75 leading-relaxed">
-              お気軽にお問い合わせください。
-            </p>
+            <div className="space-y-4 text-base md:text-lg text-white/75 leading-relaxed">
+              <p>
+                具体的なプランがなくても構いません。
+                「AIで何かできないか」という段階から、お気軽にお声がけください。
+              </p>
+              <p className="text-white/50 text-sm">
+                ※ 24時間以内にご返信いたします
+              </p>
+            </div>
           </div>
 
           {/* Right: Form */}
@@ -105,6 +112,21 @@ export default function ContactSection() {
           </div>
         </div>
       </div>
+
+      {/* Copyright */}
+      <footer className="w-[90%] mx-auto pt-12 pb-6 border-t border-white/5">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-white/30">
+            &copy; {new Date().getFullYear()} node LLC. All rights reserved.
+          </p>
+          <Link
+            href="/privacy"
+            className="text-xs text-white/30 hover:text-white/60 transition-colors"
+          >
+            プライバシーポリシー
+          </Link>
+        </div>
+      </footer>
     </FadeUpSection>
   );
 }

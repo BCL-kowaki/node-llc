@@ -3,21 +3,21 @@ import FadeUpSection from "./FadeUpSection";
 const news = [
   {
     date: "2026.03.13",
-    title: "合同会社nodeを設立いたしました",
+    title: "合同会社nodeを設立しました",
     description:
-      "AI技術でビジネスの未来を創造するため、合同会社nodeを設立いたしました。生成AI・LLM・AIエージェントの開発を中心に、企業のDX推進を支援してまいります。",
+      "福岡からAI実装カンパニーとして始動。生成AI・LLM・AIエージェント開発を軸に、企業のDXを本気で推進します。",
   },
   {
     date: "2026.03.13",
-    title: "コーポレートサイトを公開しました",
+    title: "コーポレートサイトをオープンしました",
     description:
-      "合同会社nodeのコーポレートサイトを公開いたしました。サービス内容やお問い合わせなど、お気軽にご覧ください。",
+      "nodeの考え方やサービスをまとめたサイトを公開しました。まずはお気軽にご覧ください。",
   },
 ];
 
 export default function NewsSection() {
   return (
-    <FadeUpSection id="news" className="py-24 md:py-32">
+    <FadeUpSection id="news" className="min-h-screen flex items-center py-24 md:py-32">
       <div className="w-[90%] max-w-6xl mx-auto">
         <div className="mb-12">
           <h2

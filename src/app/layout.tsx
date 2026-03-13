@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Josefin_Sans, M_PLUS_1p } from "next/font/google";
 import "./globals.css";
+import VideoBackground from "@/components/VideoBackground";
 
 const josefinSans = Josefin_Sans({
   variable: "--font-heading",
@@ -37,6 +38,7 @@ export default function RootLayout({
             </linearGradient>
           </defs>
         </svg>
+        <VideoBackground overlayOpacity={0.55} />
         {children}
       </body>
     </html>

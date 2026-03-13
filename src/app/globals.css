@@ -10,8 +10,7 @@ html {
 }
 
 body {
-  background: url("/img/bg.png") no-repeat center center fixed;
-  background-size: cover;
+  background: #000;
   color: #fff;
   font-family: "M PLUS 1p", sans-serif;
   line-height: 1;
@@ -19,14 +18,44 @@ body {
   position: relative;
 }
 
-/* Dark overlay on top of bg image */
-body::before {
-  content: "";
+/* Full-page scroll snap container */
+.snap-container {
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+/* Each snap section fills viewport and snaps into place */
+.snap-page {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+/* For sections with a lot of content, allow internal scroll */
+.snap-page-long {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  height: auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Video background overlay — adjust --video-overlay-opacity to control darkness (0–1) */
+:root {
+  --video-overlay-opacity: 0.55;
+}
+
+.video-bg-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
   z-index: 0;
   pointer-events: none;
+  background: rgba(0, 0, 0, var(--video-overlay-opacity));
 }
 
 /* Main content sits above the dark overlay */
@@ -35,31 +64,6 @@ section,
 footer {
   position: relative;
   z-index: 1;
-}
-
-/* snap-section class kept for semantics only - no scroll snap */
-
-/* Fade-up animation */
-@keyframes fadeUp {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-up {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.fade-up.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* Gradient text */
