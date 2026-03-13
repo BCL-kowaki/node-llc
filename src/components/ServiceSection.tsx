@@ -43,9 +43,14 @@ export default function ServiceSection() {
           {/* Left: Description */}
           <div className="lg:w-1/2">
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-relaxed mb-8">
+             <span className="sm:hidden">
               企画から運用まで、
-              <br />
-              一気通貫で。
+            <br />
+            一気通貫で。
+          </span>
+          <span className="hidden sm:inline">
+          企画から運用まで、一気通貫で。
+          </span>
             </h3>
             <div className="space-y-5 text-base md:text-lg text-white/75 leading-relaxed">
               <p>
