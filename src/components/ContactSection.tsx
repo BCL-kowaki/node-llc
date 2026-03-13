@@ -115,16 +115,25 @@ export default function ContactSection() {
 
       {/* Copyright */}
       <footer className="w-[90%] mx-auto pt-12 pb-6 border-t border-white/5">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="flex flex-col md:flex-row-reverse items-center justify-between gap-4">
+          <div className="flex items-center gap-4">
+            <Link
+              href="/privacy"
+              className="text-xs text-white/30 hover:text-white/60 transition-colors"
+            >
+              プライバシーポリシー
+            </Link>
+            <span className="text-white/15">|</span>
+            <Link
+              href="/tokushoho"
+              className="text-xs text-white/30 hover:text-white/60 transition-colors"
+            >
+              特定商取引法に基づく表記
+            </Link>
+          </div>
           <p className="text-xs text-white/30">
             &copy; {new Date().getFullYear()} node LLC. All rights reserved.
           </p>
-          <Link
-            href="/privacy"
-            className="text-xs text-white/30 hover:text-white/60 transition-colors"
-          >
-            プライバシーポリシー
-          </Link>
         </div>
       </footer>
     </FadeUpSection>
