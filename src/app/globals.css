@@ -113,6 +113,14 @@ footer {
   box-shadow: 0 12px 40px rgba(207, 63, 245, 0.25);
 }
 
+/* Plan card popular variant */
+.plan-card-popular {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
 /* Glass effect */
 .glass {
   background: rgba(255, 255, 255, 0.05);
@@ -155,6 +163,7 @@ textarea,
 button,
 .glass,
 .service-card,
+.plan-card-popular,
 .btn-gradient {
   border-radius: 0 !important;
 }

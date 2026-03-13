@@ -3,6 +3,9 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import MessageSection from "@/components/MessageSection";
 import ServiceSection from "@/components/ServiceSection";
+import WorkSection from "@/components/WorkSection";
+import PlanSection from "@/components/PlanSection";
+import FlowSection from "@/components/FlowSection";
 import NewsSection from "@/components/NewsSection";
 import AccessSection from "@/components/AccessSection";
 import ContactSection from "@/components/ContactSection";
@@ -16,6 +19,9 @@ export default function Home() {
         <AboutSection />
         <MessageSection />
         <ServiceSection />
+        <WorkSection />
+        <PlanSection />
+        <FlowSection />
         <NewsSection />
         <AccessSection />
         <ContactSection />
