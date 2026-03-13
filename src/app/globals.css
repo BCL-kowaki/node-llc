@@ -1,26 +1,156 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: "M PLUS 1p", sans-serif;
+  --font-heading: "Josefin Sans", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: url("/img/bg.png") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  font-family: "M PLUS 1p", sans-serif;
+  line-height: 1;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Dark overlay on top of bg image */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Main content sits above the dark overlay */
+main,
+section,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* snap-section class kept for semantics only - no scroll snap */
+
+/* Fade-up animation */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(90deg, #f80f0f, #cf3ff5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gradient icon (FontAwesome SVG) */
+.gradient-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.gradient-icon svg path {
+  fill: url(#fa-gradient) !important;
+}
+
+/* Gradient border */
+.gradient-border {
+  position: relative;
+}
+.gradient-border::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #f80f0f, #cf3ff5);
+}
+
+/* Service card with gradient border */
+.service-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid transparent;
+  border-image: linear-gradient(135deg, #f80f0f, #cf3ff5) 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(207, 63, 245, 0.25);
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* CTA button gradient */
+.btn-gradient {
+  background: linear-gradient(90deg, #f80f0f, #cf3ff5);
+  transition: all 0.3s ease;
+}
+.btn-gradient:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(207, 63, 245, 0.3);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(207, 63, 245, 0.4);
+  border-radius: 3px;
+}
+
+/* CEO avatar gradient border */
+.ceo-avatar {
+  background: linear-gradient(135deg, #f80f0f, #cf3ff5);
+}
+
+/* Reset all border-radius to 0 */
+input,
+textarea,
+button,
+.glass,
+.service-card,
+.btn-gradient {
+  border-radius: 0 !important;
 }
