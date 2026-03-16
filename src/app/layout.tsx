@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Josefin_Sans, M_PLUS_1p } from "next/font/google";
 import "./globals.css";
 import VideoBackground from "@/components/VideoBackground";
+
+const GA_MEASUREMENT_ID = "G-7S9H5PQRY4";
 
 const josefinSans = Josefin_Sans({
   variable: "--font-heading",
@@ -29,6 +32,19 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className={`${josefinSans.variable} ${mPlus1p.variable}`}>
+        {/* Google Analytics (gtag.js) */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
         {/* SVG gradient definition for FontAwesome icons */}
         <svg width="0" height="0" style={{ position: "absolute" }}>
           <defs>
