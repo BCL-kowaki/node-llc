@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const navItems = [
   { href: "#about", label: "ABOUT" },
@@ -55,15 +56,14 @@ export default function Header() {
       >
         <div className="w-[90%] mx-auto flex items-center justify-between">
           {/* Logo */}
-          <span
-            className="text-2xl md:text-4xl font-bold text-white tracking-wider"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
-            node
-            <small className="text-xs md:text-sm font-normal tracking-widest ml-1.5 opacity-80 align-middle">
-              LLC
-            </small>
-          </span>
+          <Image
+            src="/img/logo_yoko_white.png"
+            alt="合同会社node"
+            width={160}
+            height={40}
+            priority
+            className="h-8 md:h-10 w-auto"
+          />
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-8">
