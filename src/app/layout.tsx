@@ -4,7 +4,7 @@ import { Josefin_Sans, M_PLUS_1p } from "next/font/google";
 import "./globals.css";
 import VideoBackground from "@/components/VideoBackground";
 
-const GA_MEASUREMENT_ID = "G-7S9H5PQRY4";
+const GA_MEASUREMENT_ID = "G-Q5KVJVYC7Y";
 
 const josefinSans = Josefin_Sans({
   variable: "--font-heading",

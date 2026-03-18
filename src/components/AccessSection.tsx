@@ -62,7 +62,7 @@ export default function AccessSection() {
             <dt className="md:w-48 text-white/50 text-sm tracking-wider shrink-0">
               設立
             </dt>
-            <dd className="text-white text-base">2026年3月</dd>
+            <dd className="text-white text-base">2026年3月18日</dd>
           </div>
           <div className="flex flex-col md:flex-row gap-2 md:gap-8 py-4 border-b border-white/10">
             <dt className="md:w-48 text-white/50 text-sm tracking-wider shrink-0">
