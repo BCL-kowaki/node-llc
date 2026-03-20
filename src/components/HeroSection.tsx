@@ -27,18 +27,12 @@ export default function HeroSection() {
           }`}
         >
           <span className="sm:hidden">
-            AIを、
+            AIと共創する、
             <br />
-            ビジネスの力に変える。
-            <br />
-            構想から実装まで、
-            <br />
-            ともに。
+            未来のかたち。
           </span>
           <span className="hidden sm:inline">
-            AIを、ビジネスの力に変える。
-            <br />
-            構想から実装まで、ともに。
+            AIと共創する、未来のかたち。
           </span>
         </h1>
         <p
@@ -48,9 +42,9 @@ export default function HeroSection() {
               : "opacity-0 translate-y-8"
           }`}
         >
-          生成AI・LLM・AIエージェントの企画・開発・運用を一気通貫で。
+          生成AI・LLM・AIエージェント。
           <br className="hidden sm:block" />
-          福岡発のAI実装カンパニー、node。
+          企画から実装まで、ビジネスの未来を共に描く。
         </p>
       </div>
 

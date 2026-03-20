@@ -19,9 +19,9 @@ const mPlus1p = M_PLUS_1p({
 });
 
 export const metadata: Metadata = {
-  title: "合同会社node - AI技術で未来を創造する",
+  title: "合同会社node - AIと共創する未来のかたち",
   description:
-    "生成AI・LLM・AIエージェントが切り開く、次世代のビジネスのために。nodeは企業のAI導入から活用までをトータルでサポートします。",
+    "構想から実装まで、あなたのビジネスにAIを。生成AI・LLM・AIエージェントの企画・開発・運用を通じて、共に未来を創る福岡発のAIパートナーです。",
 };
 
 export default function RootLayout({
