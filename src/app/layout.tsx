@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   title: "合同会社node - AIと共創する未来のかたち",
   description:
     "構想から実装まで、あなたのビジネスにAIを。生成AI・LLM・AIエージェントの企画・開発・運用を通じて、共に未来を創る福岡発のAIパートナーです。",
+  icons: {
+    icon: "/img/favicon.ico",
+  },
 };
 
 export default function RootLayout({
