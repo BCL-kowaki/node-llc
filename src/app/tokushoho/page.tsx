@@ -51,7 +51,7 @@ export default function TokushohoPage() {
             <dt className="md:w-48 text-white/50 text-sm tracking-wider shrink-0">
               電話番号
             </dt>
-            <dd className="text-white text-base">050-0000-0000</dd>
+            <dd className="text-white text-base">070-8531-0821</dd>
           </div>
 
           <div className="flex flex-col md:flex-row gap-2 md:gap-8 py-4 border-b border-white/10">
