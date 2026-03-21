@@ -88,7 +88,7 @@ export default function AccessSection() {
             <dt className="md:w-48 text-white/50 text-sm tracking-wider shrink-0">
               電話番号
             </dt>
-            <dd className="text-white text-base">050-0000-0000</dd>
+            <dd className="text-white text-base">070-8531-0821</dd>
           </div>
           <div className="flex flex-col md:flex-row gap-2 md:gap-8 py-4">
             <dt className="md:w-48 text-white/50 text-sm tracking-wider shrink-0">
@@ -170,7 +170,7 @@ export default function AccessSection() {
                 退社後、そのシステムは全社展開されるまでに至る。
               </p>
               <p>
-                その後Web業界に転身。Webサイト制作、DTP、動画編集・撮影、
+                その後、デジタル領域の世界に転身。Webサイト制作、DTP、動画編集・撮影、
                 Webマーケティングや広告運用代行、システムや独自アプリ開発、
                 Salesforceによる社内インフラ構築など、
                 10年以上にわたりデジタルの現場で経験を積む。
