@@ -3,6 +3,7 @@
 import FadeUpSection from "./FadeUpSection";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faShareNodes,
   faUsers,
   faBullhorn,
   faVideo,
@@ -14,6 +15,7 @@ import {
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
 const works: { title: string; icon: IconDefinition }[] = [
+  { title: "独自SNS\nプラットフォーム構築", icon: faShareNodes },
   { title: "CRM\nプラットフォーム構築", icon: faUsers },
   { title: "営業マネジメント\nインフラ構築", icon: faBriefcase },
   { title: "広告一元管理\nプラットフォーム構築", icon: faBullhorn },
