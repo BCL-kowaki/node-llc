@@ -82,7 +82,7 @@ export default function AccessSection() {
             <dt className="md:w-48 text-white/50 text-sm tracking-wider shrink-0">
               法人番号
             </dt>
-            <dd className="text-white text-base">000000000000</dd>
+            <dd className="text-white text-base">2290003018216</dd>
           </div>
           <div className="flex flex-col md:flex-row gap-2 md:gap-8 py-4 border-b border-white/10">
             <dt className="md:w-48 text-white/50 text-sm tracking-wider shrink-0">
