@@ -2,16 +2,16 @@ import FadeUpSection from "./FadeUpSection";
 
 const news = [
   {
-    date: "2026.03.13",
+    date: "2026.03.18",
     title: "合同会社nodeを設立しました",
     description:
       "福岡からAI実装カンパニーとして始動。生成AI・LLM・AIエージェント開発を軸に、企業のDXを本気で推進します。",
   },
   {
-    date: "2026.03.13",
-    title: "コーポレートサイトをオープンしました",
+    date: "2026.03.18",
+    title: "公式WEBサイトを開設しました",
     description:
-      "nodeの考え方やサービスをまとめたサイトを公開しました。まずはお気軽にご覧ください。",
+      "nodeの理念やサービスをまとめたコーポレートサイトを公開しました。まずはお気軽にご覧ください。",
   },
 ];
 
