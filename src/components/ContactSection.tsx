@@ -4,6 +4,9 @@ import { useState, FormEvent } from "react";
 import Link from "next/link";
 import FadeUpSection from "./FadeUpSection";
 
+// GASデプロイ後に取得したURLをここに設定
+const GAS_URL = process.env.NEXT_PUBLIC_GAS_URL || "";
+
 export default function ContactSection() {
   const [formData, setFormData] = useState({
     name: "",
@@ -11,10 +14,28 @@ export default function ContactSection() {
     email: "",
     message: "",
   });
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    // フォーム送信処理をここに実装
+
+    if (!formData.name || !formData.email || !formData.message) return;
+
+    setStatus("sending");
+
+    try {
+      await fetch(GAS_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      setStatus("sent");
+      setFormData({ name: "", nameKana: "", email: "", message: "" });
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -52,14 +73,16 @@ export default function ContactSection() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label className="block text-white/50 text-sm tracking-wider mb-2">
-                  お名前
+                  お名前 <span className="text-red-400">*</span>
                 </label>
                 <input
                   type="text"
+                  required
                   placeholder="山田 太郎"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full bg-white/5 border border-white/10 px-5 py-3.5 text-white placeholder-white/30 focus:outline-none focus:border-purple-500/50 focus:bg-white/10 transition-all duration-300"
+                  disabled={status === "sent"}
+                  className="w-full bg-white/5 border border-white/10 px-5 py-3.5 text-white placeholder-white/30 focus:outline-none focus:border-purple-500/50 focus:bg-white/10 transition-all duration-300 disabled:opacity-40"
                 />
               </div>
 
@@ -72,42 +95,68 @@ export default function ContactSection() {
                   placeholder="ヤマダ タロウ"
                   value={formData.nameKana}
                   onChange={(e) => setFormData({ ...formData, nameKana: e.target.value })}
-                  className="w-full bg-white/5 border border-white/10 px-5 py-3.5 text-white placeholder-white/30 focus:outline-none focus:border-purple-500/50 focus:bg-white/10 transition-all duration-300"
+                  disabled={status === "sent"}
+                  className="w-full bg-white/5 border border-white/10 px-5 py-3.5 text-white placeholder-white/30 focus:outline-none focus:border-purple-500/50 focus:bg-white/10 transition-all duration-300 disabled:opacity-40"
                 />
               </div>
 
               <div>
                 <label className="block text-white/50 text-sm tracking-wider mb-2">
-                  メールアドレス
+                  メールアドレス <span className="text-red-400">*</span>
                 </label>
                 <input
                   type="email"
+                  required
                   placeholder="example@gmail.com"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full bg-white/5 border border-white/10 px-5 py-3.5 text-white placeholder-white/30 focus:outline-none focus:border-purple-500/50 focus:bg-white/10 transition-all duration-300"
+                  disabled={status === "sent"}
+                  className="w-full bg-white/5 border border-white/10 px-5 py-3.5 text-white placeholder-white/30 focus:outline-none focus:border-purple-500/50 focus:bg-white/10 transition-all duration-300 disabled:opacity-40"
                 />
               </div>
 
               <div>
                 <label className="block text-white/50 text-sm tracking-wider mb-2">
-                  お問い合わせ内容
+                  お問い合わせ内容 <span className="text-red-400">*</span>
                 </label>
                 <textarea
+                  required
                   placeholder="お問い合わせ内容"
                   rows={6}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full bg-white/5 border border-white/10 px-5 py-3.5 text-white placeholder-white/30 focus:outline-none focus:border-purple-500/50 focus:bg-white/10 transition-all duration-300 resize-none"
+                  disabled={status === "sent"}
+                  className="w-full bg-white/5 border border-white/10 px-5 py-3.5 text-white placeholder-white/30 focus:outline-none focus:border-purple-500/50 focus:bg-white/10 transition-all duration-300 resize-none disabled:opacity-40"
                 />
               </div>
 
-              <button
-                type="submit"
-                className="btn-gradient px-12 py-4 text-white font-bold text-sm tracking-wider rounded-lg"
-              >
-                送信
-              </button>
+              {status === "sent" ? (
+                <div className="py-4 px-6 border border-white/10 bg-white/5">
+                  <p className="text-white font-bold text-sm">
+                    送信完了しました。3営業日以内にご返信させていただきます。
+                  </p>
+                </div>
+              ) : status === "error" ? (
+                <div className="space-y-4">
+                  <p className="text-red-400 text-sm">
+                    送信に失敗しました。お手数ですが、もう一度お試しください。
+                  </p>
+                  <button
+                    type="submit"
+                    className="btn-gradient px-12 py-4 text-white font-bold text-sm tracking-wider"
+                  >
+                    再送信
+                  </button>
+                </div>
+              ) : (
+                <button
+                  type="submit"
+                  disabled={status === "sending"}
+                  className="btn-gradient px-12 py-4 text-white font-bold text-sm tracking-wider disabled:opacity-50"
+                >
+                  {status === "sending" ? "送信中..." : "送信"}
+                </button>
+              )}
             </form>
           </div>
         </div>
