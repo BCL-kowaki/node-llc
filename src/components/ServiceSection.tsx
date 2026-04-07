@@ -21,8 +21,8 @@ const services: { title: string; icon: IconDefinition }[] = [
   { title: "AIコンテンツ\n制作", icon: faPaintBrush },
   { title: "AI研修・\n人材育成", icon: faGraduationCap },
   { title: "AI活用\n業務効率支援", icon: faDatabase },
-  { title: "IT/DX\nコンサルティング", icon: faLightbulb },
-  { title: "Webマーケティング\nコンサルティング", icon: faChartLine },
+  { title: "IT/DX/Webマーケティング\nコンサルティング", icon: faLightbulb },
+  { title: "Webサイト・コンテンツ制作・\n広告運用代行", icon: faChartLine },
 ];
 
 export default function ServiceSection() {
