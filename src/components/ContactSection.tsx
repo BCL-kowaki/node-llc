@@ -64,7 +64,7 @@ export default function ContactSection() {
                 「AIで何かできないか」という段階から、お気軽にお声がけください。
               </p>
               <p className="text-white/50 text-sm">
-                ※ 24時間以内にご返信いたします
+                ※ 3営業日以内にご返信いたします
               </p>
             </div>
           </div>
