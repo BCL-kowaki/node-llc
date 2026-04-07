@@ -16,13 +16,13 @@ import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
 const services: { title: string; icon: IconDefinition }[] = [
   { title: "生成AI/LLM\n導入支援", icon: faRobot },
-  { title: "AIソフトウェア\n研究開発", icon: faMicrochip },
+  { title: "AIアプリケーション\n研究開発", icon: faMicrochip },
   { title: "AIエージェント\n開発", icon: faBolt },
-  { title: "AI学習データ\n構築", icon: faDatabase },
   { title: "AIコンテンツ\n制作", icon: faPaintBrush },
   { title: "AI研修・\n人材育成", icon: faGraduationCap },
+  { title: "AI活用\n業務効率支援", icon: faDatabase },
   { title: "IT/DX\nコンサルティング", icon: faLightbulb },
-  { title: "AI広告運用\n分析", icon: faChartLine },
+  { title: "Webマーケティング\nコンサルティング", icon: faChartLine },
 ];
 
 export default function ServiceSection() {

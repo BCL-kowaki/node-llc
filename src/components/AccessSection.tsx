@@ -75,7 +75,7 @@ export default function AccessSection() {
               事業内容
             </dt>
             <dd className="text-white text-base">
-              AI導入支援 / AIソフトウェア開発 / AI研修・人材育成 / IT・DXコンサルティング
+              AI導入・活用支援 / AIアプリ開発 / AI研修・人材育成 / IT・DX・Webマーケティングコンサルティング
             </dd>
           </div>
         </div>
