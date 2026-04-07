@@ -27,10 +27,11 @@ export default function ContactSection() {
       await fetch(GAS_URL, {
         method: "POST",
         mode: "no-cors",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "text/plain" },
         body: JSON.stringify(formData),
       });
 
+      // no-corsではレスポンスが読めないため、送信成功とみなす
       setStatus("sent");
       setFormData({ name: "", nameKana: "", email: "", message: "" });
     } catch {

@@ -78,24 +78,6 @@ export default function AccessSection() {
               AI導入支援 / AIソフトウェア開発 / AI研修・人材育成 / IT・DXコンサルティング
             </dd>
           </div>
-          <div className="flex flex-col md:flex-row gap-2 md:gap-8 py-4 border-b border-white/10">
-            <dt className="md:w-48 text-white/50 text-sm tracking-wider shrink-0">
-              法人番号
-            </dt>
-            <dd className="text-white text-base">2290003018216</dd>
-          </div>
-          <div className="flex flex-col md:flex-row gap-2 md:gap-8 py-4 border-b border-white/10">
-            <dt className="md:w-48 text-white/50 text-sm tracking-wider shrink-0">
-              電話番号
-            </dt>
-            <dd className="text-white text-base">070-8531-0821</dd>
-          </div>
-          <div className="flex flex-col md:flex-row gap-2 md:gap-8 py-4">
-            <dt className="md:w-48 text-white/50 text-sm tracking-wider shrink-0">
-              メールアドレス
-            </dt>
-            <dd className="text-white text-base">info@node-llc.com</dd>
-          </div>
         </div>
 
         {/* CEO Profile */}
