@@ -12,24 +12,24 @@ import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
 const steps: { title: string; icon: IconDefinition; description: string }[] = [
   {
-    title: "お問い合わせ",
+    title: "現場相談",
     icon: faEnvelope,
-    description: "フォームまたはお電話にてお気軽にご連絡ください。",
+    description: "AIで変えたい業務や、まだ言語化できていない違和感を伺います。",
   },
   {
-    title: "ヒアリング",
+    title: "課題発見",
     icon: faHeadset,
-    description: "課題や目的を丁寧にお伺いし、最適なプランをご提案します。",
+    description: "業務フロー、データ、既存ツールを見ながら実装すべき論点を絞ります。",
   },
   {
-    title: "ご契約",
+    title: "実装設計",
     icon: faFileSignature,
-    description: "プラン内容・お見積りにご納得いただいたうえで、契約を締結します。",
+    description: "優先順位、体制、プロトタイプ範囲を決め、FDEプランを設計します。",
   },
   {
-    title: "導入",
+    title: "伴走実装",
     icon: faRocket,
-    description: "開発・構築を進め、スムーズな導入・運用開始までサポートします。",
+    description: "コードを書き、現場で試し、改善しながら成果が出る状態まで進めます。",
   },
 ];
 
@@ -48,10 +48,10 @@ export default function FlowSection() {
         </div>
 
         <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-relaxed mb-6">
-          導入の流れ
+          FDE型支援の流れ
         </h3>
         <p className="text-base md:text-lg text-white/60 leading-relaxed mb-16">
-          お問い合わせから導入まで、シンプルな4ステップ。
+          相談から実装、定着まで。現場の横で進める4ステップ。
         </p>
 
         {/* Flow steps */}

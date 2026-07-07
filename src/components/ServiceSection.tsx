@@ -15,14 +15,14 @@ import {
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
 const services: { title: string; icon: IconDefinition }[] = [
-  { title: "生成AI/LLM\n導入支援", icon: faRobot },
-  { title: "AIアプリケーション\n研究開発", icon: faMicrochip },
+  { title: "FDE型AI\n実装支援", icon: faRobot },
+  { title: "業務フロー\n再設計", icon: faLightbulb },
   { title: "AIエージェント\n開発", icon: faBolt },
+  { title: "AIアプリケーション\n研究開発", icon: faMicrochip },
+  { title: "データ整備・\nシステム連携", icon: faDatabase },
+  { title: "AI研修・\n定着支援", icon: faGraduationCap },
   { title: "AIコンテンツ\n制作", icon: faPaintBrush },
-  { title: "AI研修・\n人材育成", icon: faGraduationCap },
-  { title: "AI活用\n業務効率支援", icon: faDatabase },
-  { title: "IT/DX/Webマーケティング\nコンサルティング", icon: faLightbulb },
-  { title: "Webサイト・コンテンツ制作・\n広告運用代行", icon: faChartLine },
+  { title: "Webマーケティング・\nコンサル", icon: faChartLine },
 ];
 
 export default function ServiceSection() {
@@ -43,28 +43,28 @@ export default function ServiceSection() {
           {/* Left: Description */}
           <div className="lg:w-1/2">
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-relaxed mb-8">
-             <span className="sm:hidden">
-              企画から運用まで、
-            <br />
-            一気通貫で。
-          </span>
-          <span className="hidden sm:inline">
-          企画から運用まで、一気通貫で。
-          </span>
+              <span className="sm:hidden">
+                FDE型実装を、
+                <br />
+                主力に。
+              </span>
+              <span className="hidden sm:inline">
+                FDE型AI実装を、主力に。
+              </span>
             </h3>
             <div className="space-y-5 text-base md:text-lg text-white/75 leading-relaxed">
               <p>
-                AIを導入したい。でも、何から始めればいいかわからない。
-                そんなご相談をよくいただきます。
+                nodeの中心にあるのは、FDE型の伴走支援です。
+                顧客の現場を理解し、AIが成果を出す業務設計と実装を進めます。
               </p>
               <p>
-                nodeは企画・設計・開発・運用・教育まで、
-                すべてワンストップで対応します。
-                部分的なサポートも、もちろん可能です。
+                企画、プロトタイプ、AIエージェント開発、データ連携、
+                運用定着まで一気通貫で対応します。
+                必要に応じて、単発の制作・研修・開発も可能です。
               </p>
               <p>
-                必要なのは「相談してみよう」という一歩だけ。
-                あとはわたしたちが一緒に考えます。
+                「AIを入れる」ではなく、「現場の仕事が変わる」ところまで。
+                そこに責任を持つのがnodeのFDEプランです。
               </p>
             </div>
           </div>

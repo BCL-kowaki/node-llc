@@ -19,9 +19,9 @@ const mPlus1p = M_PLUS_1p({
 });
 
 export const metadata: Metadata = {
-  title: "合同会社node - AIと共創する未来のかたち",
+  title: "合同会社node - FDE型AI実装パートナー",
   description:
-    "構想から実装まで、あなたのビジネスにAIを。生成AI・LLM・AIエージェントの企画・開発・運用を通じて、共に未来を創る福岡発のAIパートナーです。",
+    "顧客の現場に入り込み、生成AI・LLM・AIエージェントを業務成果につなげるFDE型AI実装パートナー。企画、開発、運用、定着まで一気通貫で伴走します。",
   icons: {
     icon: "/img/favicon.ico",
   },

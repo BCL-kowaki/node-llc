@@ -4,39 +4,39 @@ import FadeUpSection from "./FadeUpSection";
 
 const plans = [
   {
-    name: "Light",
-    nameJa: "ライトプラン",
+    name: "Spot",
+    nameJa: "単発スポット",
     price: "5万円〜",
-    description: "活用支援",
+    description: "相談・研修・小規模制作",
     features: [
-      "AI活用に関するご相談",
-      "導入プランのご提案",
-      "ツール選定サポート",
+      "AI活用に関する壁打ち",
+      "ツール選定・導入整理",
+      "研修・資料制作・小規模開発",
     ],
   },
   {
-    name: "Standard",
-    nameJa: "スタンダードプラン",
+    name: "FDE Core",
+    nameJa: "FDE伴走プラン",
     price: "15万円〜",
-    description: "研修・人材育成",
+    description: "主力のAI実装伴走",
     features: [
-      "ライトプランの全内容",
-      "AI研修プログラム設計",
-      "社内人材の育成支援",
-      "定期フォローアップ",
+      "現場課題の整理・優先順位づけ",
+      "AIエージェント・自動化の設計",
+      "プロトタイプ開発・改善",
+      "運用定着までの継続支援",
     ],
     popular: true,
   },
   {
-    name: "Enterprise",
-    nameJa: "エンタープライズ",
+    name: "FDE Enterprise",
+    nameJa: "FDEエンタープライズ",
     price: "ASK",
-    description: "フルカスタム対応",
+    description: "組織横断のAI実装",
     features: [
-      "スタンダードプランの全内容",
-      "専用AI開発・実装",
-      "システムインテグレーション",
-      "専任チームによる伴走支援",
+      "FDE伴走プランの全内容",
+      "既存システム・データ基盤連携",
+      "専用AIアプリケーション開発",
+      "部門横断の業務変革支援",
     ],
   },
 ];
@@ -56,13 +56,14 @@ export default function PlanSection() {
         </div>
 
         <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-relaxed mb-6">
-          料金プラン
+          FDEプラン
         </h3>
         <p className="text-base md:text-lg text-white/60 leading-relaxed mb-12">
-          お客様の規模・目的に合わせた最適なプランをご用意しています。
+          主力は、現場に入り込んでAI実装を進めるFDE伴走プランです。
+          単発の相談・研修・制作も入口としてご利用いただけます。
           <br />
           <span className="text-sm text-white/40">
-            ※上記は月額プランの料金です。システム開発・プラットフォーム構築等の単発案件については、別途お見積りとなります。
+            ※上記は目安です。業務範囲、開発内容、連携システムに応じて個別にお見積りします。
           </span>
         </p>
 

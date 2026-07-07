@@ -6,7 +6,11 @@ export default function HeroSection() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    setVisible(true);
+    const frame = requestAnimationFrame(() => {
+      setVisible(true);
+    });
+
+    return () => cancelAnimationFrame(frame);
   }, []);
 
   return (
@@ -27,24 +31,24 @@ export default function HeroSection() {
           }`}
         >
           <span className="sm:hidden">
-            AIと共創する、
+            未来は、
             <br />
-            未来のかたち。
+            現場から起動する。
           </span>
           <span className="hidden sm:inline">
-            AIと共創する、未来のかたち。
+            未来は、現場から起動する。
           </span>
         </h1>
         <p
-          className={`text-base sm:text-xl md:text-2xl lg:text-3xl font-light text-white/80 leading-relaxed transition-all duration-1000 delay-300 ${
+          className={`text-base sm:text-xl md:text-2xl lg:text-3xl font-light text-white/90 leading-relaxed transition-all duration-1000 delay-300 ${
             visible
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-8"
           }`}
         >
-          生成AI・LLM・AIエージェント。
+          FDE型AI実装パートナー。
           <br className="hidden sm:block" />
-          企画から実装まで、ビジネスの未来を共に描く。
+          AIエージェントを事業の中枢へ。構想・コード・運用まで走り切る。
         </p>
       </div>
 

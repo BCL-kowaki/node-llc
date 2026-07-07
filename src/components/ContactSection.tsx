@@ -56,12 +56,13 @@ export default function ContactSection() {
           {/* Left: Message */}
           <div className="lg:w-2/5">
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-relaxed mb-6">
-              まずは、ご相談から。
+              まずは、現場の話から。
             </h3>
             <div className="space-y-4 text-base md:text-lg text-white/75 leading-relaxed">
               <p>
-                具体的なプランがなくても構いません。
-                「AIで何かできないか」という段階から、お気軽にお声がけください。
+                具体的な要件がなくても構いません。
+                「この業務をAIで変えられないか」という段階から、
+                FDE型の進め方をご提案します。
               </p>
               <p className="text-white/50 text-sm">
                 ※ 3営業日以内にご返信いたします

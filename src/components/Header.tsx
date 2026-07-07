@@ -5,7 +5,8 @@ import Image from "next/image";
 
 const navItems = [
   { href: "#about", label: "ABOUT" },
-  { href: "#service", label: "SERVICE" },
+  { href: "#service", label: "FDE" },
+  { href: "#plan", label: "PLAN" },
   { href: "#access", label: "ACCESS" },
   { href: "#contact", label: "CONTACT" },
 ];
@@ -62,6 +63,7 @@ export default function Header() {
             width={160}
             height={40}
             priority
+            unoptimized
             className="h-8 md:h-10 w-auto"
           />
 
