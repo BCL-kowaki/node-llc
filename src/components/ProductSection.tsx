@@ -20,11 +20,12 @@ const products: Product[] = [
     name: "Salesync",
     logo: "/img/salesync-logo.png",
     category: "独自CRMプラットフォーム",
-    catch: "使う機能だけの、あなた専用CRM。",
+    catch: "既製品に、業務を合わせない。",
     features: [
       "既製CRMに業務を合わせず、社内の商流・営業フローに沿ってゼロから設計",
       "使わない機能に費用を払わない、必要な仕組みだけを実装",
       "導入後も改善・追加構築まで継続して伴走",
+      "KPI構築、営業支援サポート、業務改善まで一気通貫で対応",
     ],
     price: [
       { label: "初期費用", value: "300,000円〜" },
