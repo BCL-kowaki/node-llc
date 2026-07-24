@@ -4,6 +4,7 @@ import AboutSection from "@/components/AboutSection";
 import MessageSection from "@/components/MessageSection";
 import ServiceSection from "@/components/ServiceSection";
 import WorkSection from "@/components/WorkSection";
+import ProductSection from "@/components/ProductSection";
 import PlanSection from "@/components/PlanSection";
 import FlowSection from "@/components/FlowSection";
 import NewsSection from "@/components/NewsSection";
@@ -20,6 +21,7 @@ export default function Home() {
         <MessageSection />
         <ServiceSection />
         <WorkSection />
+        <ProductSection />
         <PlanSection />
         <FlowSection />
         <NewsSection />
