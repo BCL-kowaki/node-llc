@@ -19,17 +19,17 @@ const steps: { title: string; icon: IconDefinition; description: string }[] = [
   {
     title: "課題発見",
     icon: faHeadset,
-    description: "業務フロー、データ、既存ツールを見ながら実装すべき論点を絞ります。",
+    description: "業務フロー、データ、既存ツールを見ながら、目標達成に向けて実装すべき論点を絞ります。",
   },
   {
     title: "実装設計",
     icon: faFileSignature,
-    description: "優先順位、体制、プロトタイプ範囲を決め、FDEプランを設計します。",
+    description: "優先順位、体制、KPI、プロトタイプ範囲を決め、FDEプランを設計します。",
   },
   {
     title: "伴走実装",
     icon: faRocket,
-    description: "コードを書き、現場で試し、改善しながら成果が出る状態まで進めます。",
+    description: "コードを書き、現場で試し、KPIを見ながら改善し、目標達成まで進めます。",
   },
 ];
 
@@ -51,7 +51,7 @@ export default function FlowSection() {
           FDE型支援の流れ
         </h3>
         <p className="text-base md:text-lg text-white/60 leading-relaxed mb-16">
-          相談から実装、定着まで。現場の横で進める4ステップ。
+          相談から実装、目標達成まで。現場の横で進める4ステップ。
         </p>
 
         {/* Flow steps */}

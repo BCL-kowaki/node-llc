@@ -15,6 +15,7 @@ import {
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
 const services: { title: string; icon: IconDefinition }[] = [
+  { title: "KPI設計・\n目標逆算支援", icon: faRobot },
   { title: "FDE型AI\n実装支援", icon: faRobot },
   { title: "業務フロー\n再設計", icon: faLightbulb },
   { title: "AIエージェント\n開発", icon: faBolt },
@@ -46,25 +47,21 @@ export default function ServiceSection() {
               <span className="sm:hidden">
                 FDE型実装を、
                 <br />
-                主力に。
+                目標達成の手段に。
               </span>
               <span className="hidden sm:inline">
-                FDE型AI実装を、主力に。
+                FDE型AI実装を、目標達成の手段に。
               </span>
             </h3>
             <div className="space-y-5 text-base md:text-lg text-white/75 leading-relaxed">
               <p>
-                nodeの中心にあるのは、FDE型の伴走支援です。
-                顧客の現場を理解し、AIが成果を出す業務設計と実装を進めます。
+                nodeの中心にあるのは、FDE型の伴走支援です。ただし目的はAI導入ではなく、KPIで測れる目標達成。顧客の現場を理解し、数字が動く業務設計と実装を進めます。
               </p>
               <p>
-                企画、プロトタイプ、AIエージェント開発、データ連携、
-                運用定着まで一気通貫で対応します。
-                必要に応じて、単発の制作・研修・開発も可能です。
+                企画、プロトタイプ、AIエージェント開発、データ連携、運用定着まで一気通貫で対応します。マネジメント経験を活かしたKPI設計や組織運営支援も、必要に応じて組み込みます。
               </p>
               <p>
-                「AIを入れる」ではなく、「現場の仕事が変わる」ところまで。
-                そこに責任を持つのがnodeのFDEプランです。
+                「AIを入れる」ではなく、「目標に向かって数字が動く」ところまで。そこに責任を持つのがnodeのFDEプランです。
               </p>
             </div>
           </div>
