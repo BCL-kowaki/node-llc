@@ -24,11 +24,19 @@ export default function PrivacyPage() {
         <p className="text-white/50 text-sm mb-12">プライバシーポリシー</p>
 
         <div className="space-y-10 text-white/75 text-base leading-relaxed">
+          {/* リード文：ポリシー全体の基本方針 */}
+          <p>
+            合同会社node（以下「当社」）は、お客様の個人情報の重要性を認識し、
+            以下の方針に基づき適切に取り扱います。
+          </p>
+
           <section>
             <h2 className="text-white font-bold text-lg mb-4">1. 個人情報の取得について</h2>
             <p>
-              合同会社node（以下「当社」）は、お問い合わせフォーム等を通じて、
+              当社は、お問い合わせフォーム等を通じて、
               お名前、メールアドレス、電話番号等の個人情報を取得することがあります。
+              また、SNS広告等の広告媒体（Google、Facebook、Instagram等）を通じて、
+              お名前、メールアドレス、電話番号、会社名等の情報を取得する場合があります。
               個人情報の取得は、適正かつ公正な手段により行います。
             </p>
           </section>
@@ -39,6 +47,7 @@ export default function PrivacyPage() {
             <ul className="list-disc list-inside mt-3 space-y-1">
               <li>お問い合わせへの回答・対応</li>
               <li>当社サービスに関する情報のご案内</li>
+              <li>コスト削減診断のご案内、および電話等によるご案内・ご説明のため</li>
               <li>サービスの提供・改善のため</li>
               <li>契約の履行・管理のため</li>
             </ul>
@@ -60,9 +69,11 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-white font-bold text-lg mb-4">5. 個人情報の開示・訂正・削除</h2>
+            <h2 className="text-white font-bold text-lg mb-4">
+              5. 個人情報の開示・訂正・削除・利用停止
+            </h2>
             <p>
-              ご本人から個人情報の開示・訂正・削除等のご請求があった場合は、
+              ご本人から個人情報の開示・訂正・削除・利用停止等のご請求があった場合は、
               本人確認の上、合理的な期間内に対応いたします。
             </p>
           </section>
