@@ -33,7 +33,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja">
+    // data-scroll-behavior: ページ遷移時のスクロールリセットにはCSSのsmoothスクロールを
+    // 適用させない(遷移時に逆スクロールして見える問題の対策)。ページ内アンカーは従来どおり滑らか
+    <html lang="ja" data-scroll-behavior="smooth">
       <body className={`${josefinSans.variable} ${mPlus1p.variable}`}>
         {/* Google Analytics (gtag.js) */}
         <Script
