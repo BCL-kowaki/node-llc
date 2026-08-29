@@ -10,7 +10,6 @@ import styles from "../test.module.css";
 export const metadata: Metadata = {
   title: "お知らせ | 合同会社node",
   description: "合同会社nodeからの公式なお知らせ一覧です。",
-  robots: { index: false, follow: false },
 };
 
 export default function NewsPage() {
@@ -23,7 +22,7 @@ export default function NewsPage() {
 
       <section className={`${styles.detailHero} ${styles.companyHero}`}>
         <div className={styles.breadcrumbs}>
-          <Link href="/test">TOP</Link>
+          <Link href="/">TOP</Link>
           <span>/</span>
           <span>NEWS</span>
         </div>
@@ -35,7 +34,7 @@ export default function NewsPage() {
       <section className={styles.newsSection}>
         <div className={styles.newsList}>
           {newsPosts.map((post) => (
-            <Link key={post.slug} href={`/test/news/${post.slug}`}>
+            <Link key={post.slug} href={`/news/${post.slug}`}>
               <time className={styles.newsDate} dateTime={post.dateISO}>
                 {post.date}
               </time>

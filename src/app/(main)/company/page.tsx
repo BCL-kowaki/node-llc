@@ -11,7 +11,6 @@ import styles from "../test.module.css";
 export const metadata: Metadata = {
   title: "会社概要 | 合同会社node",
   description: "合同会社nodeの代表メッセージと会社概要をご紹介します。",
-  robots: { index: false, follow: false },
 };
 
 export default function CompanyPage() {
@@ -24,7 +23,7 @@ export default function CompanyPage() {
 
       <section className={`${styles.detailHero} ${styles.companyHero}`}>
         <div className={styles.breadcrumbs}>
-          <Link href="/test">TOP</Link>
+          <Link href="/">TOP</Link>
           <span>/</span>
           <span>COMPANY</span>
         </div>

@@ -48,7 +48,6 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   return {
     title,
     description: service.description,
-    robots: { index: false, follow: false },
     openGraph: {
       title,
       description: service.description,
@@ -87,9 +86,9 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
 
       <section className={styles.detailHero}>
         <div className={styles.breadcrumbs}>
-          <Link href="/test">TOP</Link>
+          <Link href="/">TOP</Link>
           <span>/</span>
-          <Link href="/test#services">SERVICES</Link>
+          <Link href="/#services">SERVICES</Link>
           <span>/</span>
           <span>{service.number}</span>
         </div>
@@ -256,7 +255,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
         </div>
         <div className={styles.relatedGrid}>
           {relatedServices.map((relatedService) => (
-            <Link key={relatedService.slug} href={`/test/services/${relatedService.slug}`}>
+            <Link key={relatedService.slug} href={`/services/${relatedService.slug}`}>
               <span>{relatedService.number}</span>
               <h3>{relatedService.title}</h3>
               <p>{relatedService.cardCopy}</p>

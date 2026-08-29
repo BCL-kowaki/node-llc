@@ -9,7 +9,6 @@ import styles from "../test.module.css";
 export const metadata: Metadata = {
   title: "お問い合わせ | 合同会社node",
   description: "合同会社nodeへのご相談・お問い合わせはこちらから。",
-  robots: { index: false, follow: false },
 };
 
 export default function ContactPage() {
@@ -22,7 +21,7 @@ export default function ContactPage() {
 
       <section className={`${styles.detailHero} ${styles.companyHero}`}>
         <div className={styles.breadcrumbs}>
-          <Link href="/test">TOP</Link>
+          <Link href="/">TOP</Link>
           <span>/</span>
           <span>CONTACT</span>
         </div>

@@ -24,7 +24,6 @@ export async function generateMetadata({ params }: NewsPageProps): Promise<Metad
   return {
     title: `${post.title} | 合同会社node`,
     description: post.body[0],
-    robots: { index: false, follow: false },
   };
 }
 
@@ -45,9 +44,9 @@ export default async function NewsArticlePage({ params }: NewsPageProps) {
 
       <section className={`${styles.detailHero} ${styles.companyHero} ${styles.articleHero}`}>
         <div className={styles.breadcrumbs}>
-          <Link href="/test">TOP</Link>
+          <Link href="/">TOP</Link>
           <span>/</span>
-          <Link href="/test/news">NEWS</Link>
+          <Link href="/news">NEWS</Link>
         </div>
         <div className={styles.articleMeta}>
           <time className={styles.newsDate} dateTime={post.dateISO}>
@@ -63,7 +62,7 @@ export default async function NewsArticlePage({ params }: NewsPageProps) {
           {post.body.map((paragraph) => (
             <p key={paragraph.slice(0, 24)}>{paragraph}</p>
           ))}
-          <Link className={styles.articleBack} href="/test/news">
+          <Link className={styles.articleBack} href="/news">
             ← お知らせ一覧へ戻る
           </Link>
         </div>

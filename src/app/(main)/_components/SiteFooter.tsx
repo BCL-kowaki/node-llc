@@ -8,7 +8,7 @@ export default function SiteFooter() {
     <footer className={styles.footer}>
       <div className={styles.footerTop}>
         <div>
-          <Link className={styles.footerLogo} href="/test">
+          <Link className={styles.footerLogo} href="/">
             <Image
               src="/test/logo-horizontal-trimmed.png"
               alt="合同会社node"
@@ -29,16 +29,16 @@ export default function SiteFooter() {
           <div>
             <p>SERVICES</p>
             {services.map((service) => (
-              <Link key={service.slug} href={`/test/services/${service.slug}`}>
+              <Link key={service.slug} href={`/services/${service.slug}`}>
                 {service.title}
               </Link>
             ))}
           </div>
           <div>
             <p>COMPANY</p>
-            <Link href="/test/company">会社情報</Link>
-            <Link href="/test/news">お知らせ</Link>
-            <Link href="/test/contact">お問い合わせ</Link>
+            <Link href="/company">会社情報</Link>
+            <Link href="/news">お知らせ</Link>
+            <Link href="/contact">お問い合わせ</Link>
             <Link href="/privacy">プライバシーポリシー</Link>
             <Link href="/tokushoho">特定商取引法に基づく表記</Link>
           </div>

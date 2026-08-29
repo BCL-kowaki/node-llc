@@ -17,7 +17,7 @@ export default function ContactCta() {
           <br />
           要件書も企画書もいりません。現状をお聞かせいただければ、課題の整理から、効果の出やすい最初の一歩までご提案します。
         </p>
-        <Link className={styles.contactButton} href="/test/contact">
+        <Link className={styles.contactButton} href="/contact">
           お問い合わせ
           <span aria-hidden="true">↗</span>
         </Link>

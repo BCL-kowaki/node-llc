@@ -114,7 +114,7 @@ export default function TestHomePage() {
               key={service.slug}
               className={`${styles.serviceCard} ${index % 2 === 1 ? styles.serviceCardReverse : ""}`}
             >
-              <Link href={`/test/services/${service.slug}`} aria-label={`${service.title}の詳細を見る`}>
+              <Link href={`/services/${service.slug}`} aria-label={`${service.title}の詳細を見る`}>
                 <div className={styles.serviceCardCopy}>
                   <div className={styles.serviceMeta}>
                     <span>{service.number}</span>
