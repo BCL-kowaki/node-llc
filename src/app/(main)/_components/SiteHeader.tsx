@@ -1,9 +1,19 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useRef } from "react";
 import { services } from "../_data/services";
 import styles from "../test.module.css";
 
 export default function SiteHeader() {
+  const menuRef = useRef<HTMLDetailsElement>(null);
+
+  // リンクをタップしたらメニューを閉じる(同一ページ内アンカーでも閉じるように)
+  const closeMenu = () => {
+    menuRef.current?.removeAttribute("open");
+  };
+
   return (
     <header className={styles.header}>
       <Link className={styles.logo} href="/" aria-label="node トップページへ">
@@ -29,25 +39,30 @@ export default function SiteHeader() {
         </Link>
       </nav>
 
-      <details className={styles.mobileMenu}>
+      <details ref={menuRef} className={styles.mobileMenu}>
         <summary aria-label="メニューを開く">
           <span />
           <span />
         </summary>
         <div className={styles.mobileMenuPanel}>
           <p>MENU</p>
-          <nav aria-label="モバイルナビゲーション">
-            <Link href="/">トップ</Link>
-            <Link href="/#services">サービス一覧</Link>
+          <nav aria-label="モバイルナビゲーション" onClick={closeMenu}>
+            <Link href="/">TOP</Link>
+            <Link href="/#services">SERVICE</Link>
             {services.map((service) => (
-              <Link key={service.slug} href={`/services/${service.slug}`}>
+              <Link
+                key={service.slug}
+                className={styles.mobileMenuSub}
+                href={`/services/${service.slug}`}
+              >
                 <small>{service.number}</small>
                 {service.title}
               </Link>
             ))}
-            <Link href="/company">会社概要</Link>
-            <Link href="/news">お知らせ</Link>
-            <Link href="/contact">お問い合わせ</Link>
+            <Link href="/news">NEWS</Link>
+            <Link href="/">PRODUCT</Link>
+            <Link href="/company">ABOUT</Link>
+            <Link href="/contact">CONTACT</Link>
           </nav>
         </div>
       </details>

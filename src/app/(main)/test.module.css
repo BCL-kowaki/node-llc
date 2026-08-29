@@ -55,9 +55,9 @@
   justify-content: space-between;
   padding: 20px clamp(24px, 5vw, 72px);
   border-bottom: 1px solid rgba(20, 20, 20, 0.08);
+  /* 背景は不透明の白。backdrop-filterは、モバイルメニューの
+     position: fixed の基準を狂わせるバグの原因になるため使用しない */
   background: #fff;
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
 }
 
 .logo,
@@ -1735,15 +1735,21 @@
     display: block;
   }
 
+  /* スマホではロゴを一回り小さく */
+  .logo {
+    width: 116px;
+    height: 32px;
+  }
+
   .mobileMenu > summary {
     position: relative;
     z-index: 102;
     display: grid;
-    width: 44px;
-    height: 44px;
+    width: 36px;
+    height: 36px;
     cursor: pointer;
     place-content: center;
-    gap: 7px;
+    gap: 6px;
     border-radius: 50%;
     background: var(--ink);
     list-style: none;
@@ -1755,7 +1761,7 @@
 
   .mobileMenu > summary span {
     display: block;
-    width: 18px;
+    width: 15px;
     height: 1px;
     background: #fff;
     transition: transform 180ms ease;
@@ -1795,7 +1801,7 @@
 
   .mobileMenuPanel a {
     display: grid;
-    grid-template-columns: 42px 1fr;
+    grid-template-columns: 1fr;
     padding: 14px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     color: inherit;
@@ -1804,10 +1810,10 @@
     text-decoration: none;
   }
 
-  .mobileMenuPanel a:first-child,
-  .mobileMenuPanel a:nth-child(2),
-  .mobileMenuPanel a:last-child {
-    grid-template-columns: 1fr;
+  /* サービスのサブ項目(番号つき)は番号カラムを設けて一段小さく */
+  .mobileMenuPanel a.mobileMenuSub {
+    grid-template-columns: 42px 1fr;
+    font-size: 15px;
   }
 
   .mobileMenuPanel a small {
