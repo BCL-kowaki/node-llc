@@ -11,13 +11,8 @@ export default function NoteBanner() {
       rel="noopener noreferrer"
     >
       <span className={styles.noteBannerLogo}>
-        <Image
-          src="/test/logo-horizontal-trimmed.png"
-          alt="node"
-          width={1636}
-          height={523}
-          unoptimized
-        />
+        {/* note公式のワードマークロゴ(黒)をCSSで白反転して表示 */}
+        <Image src="/img/note-logo.svg" alt="note" width={98} height={22} unoptimized />
       </span>
       <span className={styles.noteBannerText}>
         <p>CEO BLOG ON NOTE</p>
