@@ -2698,3 +2698,31 @@
     font-size: 15px;
   }
 }
+
+/* お知らせ一覧: 週次AIダイジェストの案内 */
+.newsNote {
+  max-width: 920px;
+  margin: 0 0 34px;
+  padding: 18px 22px;
+  border-left: 2px solid var(--ink);
+  background: rgba(255, 255, 255, 0.6);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.newsNote b {
+  display: block;
+  margin-bottom: 6px;
+  font-family: var(--font-heading), sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+@media (max-width: 800px) {
+  .newsNote {
+    margin-bottom: 26px;
+    padding: 16px 18px;
+    font-size: 14px;
+  }
+}

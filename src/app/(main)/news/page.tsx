@@ -28,10 +28,16 @@ export default function NewsPage() {
         </div>
         <p className={styles.detailEnglish}>NEWS</p>
         <h1>お知らせ</h1>
-        <p className={styles.detailLead}>nodeからの公式なお知らせをお届けします。</p>
+        <p className={styles.detailLead}>
+          nodeからの公式なお知らせと、AI業界の注目ニュースをお届けします。
+        </p>
       </section>
 
       <section className={styles.newsSection}>
+        <p className={styles.newsNote}>
+          <b>WEEKLY AI DIGEST</b>
+          AIの法規制や主要AI企業の動きから、押さえておきたいトピックを毎週ピックアップして掲載しています。
+        </p>
         <div className={styles.newsList}>
           {newsPosts.map((post) => (
             <Link key={post.slug} href={`/news/${post.slug}`}>
