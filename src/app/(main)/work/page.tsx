@@ -40,19 +40,22 @@ export default function WorkPage() {
           const softStyle: SoftStyle = { "--work-soft": work.soft, "--work-accent": work.accent };
           return (
             <article key={work.slug} className={styles.workItem} style={softStyle}>
-              <div className={styles.workVisual}>
-                <div className={styles.phoneFrame}>
-                  <Image
-                    src={work.image}
-                    alt={`${work.title}の画面`}
-                    width={work.imageWidth}
-                    height={work.imageHeight}
-                    unoptimized
-                    className={`${styles.phoneScreen} ${
-                      work.imageContain ? styles.phoneScreenContain : ""
-                    }`}
-                  />
-                </div>
+              <div className={`${styles.workVisual} ${styles.workVisualPair}`}>
+                {work.images.map((image, imageIndex) => (
+                  <div
+                    className={`${styles.phoneFrame} ${imageIndex === 1 ? styles.phoneFrameSecond : ""}`}
+                    key={image.src}
+                  >
+                    <Image
+                      src={image.src}
+                      alt={`${work.title}の画面${imageIndex + 1}`}
+                      width={image.width}
+                      height={image.height}
+                      unoptimized
+                      className={`${styles.phoneScreen} ${image.contain ? styles.phoneScreenContain : ""}`}
+                    />
+                  </div>
+                ))}
               </div>
               <div className={styles.workCopy}>
                 <p className={styles.workEnglish}>{work.englishTitle}</p>

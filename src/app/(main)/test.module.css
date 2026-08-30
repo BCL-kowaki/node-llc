@@ -2572,6 +2572,10 @@
   padding: 70px 30px;
 }
 
+.workVisualPair {
+  gap: clamp(14px, 2vw, 28px);
+}
+
 /* 実績カラーの点描スウォッシュ(斜めの帯) */
 .workVisual::before {
   content: "";
@@ -2596,6 +2600,10 @@
   background: #fff;
   box-shadow: 24px 34px 60px rgba(20, 20, 20, 0.28);
   transform: rotate(9deg);
+}
+
+.phoneFrameSecond {
+  transform: rotate(-7deg) translateY(-24px);
 }
 
 /* ノッチ(パンチホール) */
@@ -2699,6 +2707,20 @@
 
   .workVisual {
     padding: 50px 24px;
+  }
+
+  .workVisualPair {
+    gap: 10px;
+  }
+
+  .phoneFrame {
+    width: min(190px, 42vw);
+    border-width: 7px;
+    border-radius: 30px;
+  }
+
+  .phoneFrameSecond {
+    transform: rotate(-7deg) translateY(-16px);
   }
 
   .workCopy h2 {
