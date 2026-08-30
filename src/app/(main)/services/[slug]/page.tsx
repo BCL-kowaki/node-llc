@@ -1,5 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowTrendUp, faCompass, faCubes, faNetworkWired } from "@fortawesome/free-solid-svg-icons";
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { CSSProperties } from "react";
@@ -19,7 +20,7 @@ type ServicePageProps = {
   params: Promise<{ slug: string }>;
 };
 
-const supportIcons = ["field", "build", "connect", "improve"] as const;
+const supportIcons = [faCompass, faCubes, faNetworkWired, faArrowTrendUp] as const;
 
 // イメージカラー(#rrggbb)を粒子アニメーション用のRGB値へ変換する
 function hexToRgb(hex: string): [number, number, number] {
@@ -161,13 +162,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
             <article key={support.title}>
               <span>{String(index + 1).padStart(2, "0")}</span>
               <div className={styles.supportMark} aria-hidden="true">
-                <Image
-                  src={`/test/generated/support/${supportIcons[index % supportIcons.length]}.png`}
-                  alt=""
-                  width={640}
-                  height={640}
-                  unoptimized
-                />
+                <FontAwesomeIcon icon={supportIcons[index % supportIcons.length]} />
               </div>
               <h3>{support.title}</h3>
               <p>{support.description}</p>

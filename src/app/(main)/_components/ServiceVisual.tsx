@@ -1,3 +1,13 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBrain,
+  faBullseye,
+  faCode,
+  faComments,
+  faGlobe,
+  faHandshake,
+  faVideo,
+} from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import type { CSSProperties } from "react";
 import type { Service } from "../_data/services";
@@ -6,6 +16,16 @@ import styles from "../test.module.css";
 type AccentStyle = CSSProperties & {
   "--service-accent": string;
   "--service-soft": string;
+};
+
+const serviceIcons = {
+  "fde-partner": faHandshake,
+  "system-development": faCode,
+  "web-production": faGlobe,
+  "advertising-operations": faBullseye,
+  "line-harness": faComments,
+  "video-production": faVideo,
+  "ai-enablement": faBrain,
 };
 
 export default function ServiceVisual({ service, compact = false }: { service: Service; compact?: boolean }) {
@@ -29,6 +49,9 @@ export default function ServiceVisual({ service, compact = false }: { service: S
         unoptimized
         className={styles.serviceVisualImage}
       />
+      <span className={styles.serviceVisualIcon}>
+        <FontAwesomeIcon icon={serviceIcons[service.slug as keyof typeof serviceIcons]} />
+      </span>
       <span className={styles.visualNumber}>{service.number}</span>
     </div>
   );

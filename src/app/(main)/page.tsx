@@ -1,4 +1,5 @@
-import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowTrendUp, faCubes, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import ContactCta from "./_components/ContactCta";
 import ParticleField from "./_components/ParticleField";
@@ -13,21 +14,21 @@ const approachItems = [
     number: "01",
     title: "現場から考える",
     english: "DISCOVER",
-    icon: "discover",
+    icon: faMagnifyingGlass,
     description: "資料だけで判断せず、実際の業務と顧客の行動を見て、解くべき課題を見つけます。",
   },
   {
     number: "02",
     title: "つくって確かめる",
     english: "BUILD",
-    icon: "build",
+    icon: faCubes,
     description: "大きな計画を待つより、検証できる最小単位をつくり、現場の反応から学びます。",
   },
   {
     number: "03",
     title: "運用で育てる",
     english: "GROW",
-    icon: "grow",
+    icon: faArrowTrendUp,
     description: "公開や導入をゴールにせず、数字と声を見ながら、成果が続く仕組みへ改善します。",
   },
 ];
@@ -155,13 +156,7 @@ export default function TestHomePage() {
                 <span>{item.english}</span>
               </div>
               <div className={styles.approachShape} aria-hidden="true">
-                <Image
-                  src={`/test/generated/approach/${item.icon}.png`}
-                  alt=""
-                  width={640}
-                  height={640}
-                  unoptimized
-                />
+                <FontAwesomeIcon icon={item.icon} />
               </div>
               <h3>{item.title}</h3>
               <p>{item.description}</p>
