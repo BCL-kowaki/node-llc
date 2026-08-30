@@ -664,13 +664,13 @@
   --approach-icon: #ff6248;
   position: relative;
   display: grid;
-  width: min(210px, 72%);
+  width: min(120px, 72%);
   aspect-ratio: 1;
   place-items: center;
   margin: 55px auto;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 48px;
+  border-radius: 98px;
   background:
     radial-gradient(circle at 78% 18%, color-mix(in srgb, var(--approach-icon) 72%, white) 0 3px, transparent 4px),
     radial-gradient(circle at 22% 82%, color-mix(in srgb, var(--approach-icon) 68%, white) 0 2px, transparent 3px),
@@ -1376,13 +1376,13 @@
 .supportMark {
   position: relative;
   display: grid;
-  width: 168px;
-  height: 168px;
+  width: 130px;
+  height: 130px;
   place-items: center;
   margin: 42px auto;
   overflow: hidden;
   border: 1px solid color-mix(in srgb, var(--service-accent) 26%, transparent);
-  border-radius: 42px;
+  border-radius: 92px;
   background:
     radial-gradient(circle at 72% 24%, color-mix(in srgb, var(--service-accent) 80%, white) 0 3px, transparent 4px),
     linear-gradient(145deg, color-mix(in srgb, var(--service-accent) 15%, #202631), #0d1118 72%);
