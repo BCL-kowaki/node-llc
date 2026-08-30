@@ -186,11 +186,12 @@
   opacity: 0.35;
 }
 
+/* セクション見出しの上に置く英字ラベル(PC 15px / スマホ 12px で全ページ統一) */
 .eyebrow,
 .sectionLabel {
   margin: 0;
   font-family: var(--font-heading), sans-serif;
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.22em;
   line-height: 1.4;
@@ -631,6 +632,12 @@
   letter-spacing: 0.14em;
 }
 
+/* カード番号はサービスカードと同じ見せ方に揃える(PC 84px / スマホ 48px) */
+.approachTop span:first-child {
+  font-size: 84px;
+  line-height: 1;
+}
+
 .approachShape {
   position: relative;
   display: grid;
@@ -736,6 +743,12 @@
   background: var(--paper-deep);
 }
 
+/* 英字ラベルは他セクションと同じく、セクションの左上に置く */
+.companySection > .sectionLabel {
+  grid-column: 1 / -1;
+  padding: 90px clamp(24px, 7vw, 100px) 0;
+}
+
 .companyImageWrap {
   position: relative;
   display: flex;
@@ -790,7 +803,7 @@
 }
 
 .companyCopy h2 {
-  margin: 65px 0 48px;
+  margin: 0 0 48px;
 }
 
 .companyCopy > p:not(.sectionLabel) {
@@ -1954,6 +1967,8 @@
   .footerLinks p,
   .breadcrumbs,
   .outcomeStrip > p,
+  .eyebrow,
+  .sectionLabel,
   .outcomeStrip li span,
   .deliverablesSection li span,
   .detailProcessList li > div > span,
@@ -1967,7 +1982,8 @@
   }
 
   /* カード番号はスマホ 48px */
-  .serviceMeta span:first-child {
+  .serviceMeta span:first-child,
+  .approachTop span:first-child {
     font-size: 48px;
   }
 
@@ -2016,7 +2032,7 @@
   }
 
   .flowList li {
-    grid-template-columns: 54px 1fr;
+    grid-template-columns: 36px 1fr;
     gap: 12px 18px;
     padding: 26px 0;
   }

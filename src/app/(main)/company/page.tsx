@@ -35,6 +35,7 @@ export default function CompanyPage() {
       </section>
 
       <section id="company" className={styles.companySection}>
+        <p className={styles.sectionLabel}>MESSAGE</p>
         <div className={styles.companyImageWrap}>
           <div className={styles.companyImageDots} aria-hidden="true" />
           <Image
@@ -52,7 +53,6 @@ export default function CompanyPage() {
           </p>
         </div>
         <div className={styles.companyCopy}>
-          <p className={styles.sectionLabel}>MESSAGE</p>
           <h2>
             技術の先に<span className={styles.serifPunct}>、</span>
             <br />
