@@ -2536,31 +2536,47 @@
 
 .workItem {
   display: grid;
-  grid-template-columns: minmax(300px, 0.8fr) 1.2fr;
-  align-items: stretch;
-  border: 1px solid var(--line);
-  background: #fff;
+  grid-template-areas: "copy visual";
+  grid-template-columns: 1.05fr minmax(320px, 0.95fr);
+  align-items: center;
+  gap: clamp(30px, 4vw, 70px);
+  padding: 40px 0;
 }
 
-/* スマホモックアップを置く面(実績ごとのアクセント色) */
+/* スマホモックアップを置く面: 枠は設けず、背後に点描のスウォッシュを敷く */
 .workVisual {
+  position: relative;
+  grid-area: visual;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 56px 30px;
-  background: var(--work-soft, var(--paper-deep));
+  padding: 70px 30px;
 }
 
-/* スマホ端末風フレーム */
+/* 実績カラーの点描スウォッシュ(斜めの帯) */
+.workVisual::before {
+  content: "";
+  position: absolute;
+  inset: 4% -14%;
+  background-image: radial-gradient(var(--work-accent, #78a8c8) 1.2px, transparent 1.7px);
+  background-size: 9px 9px;
+  mask-image: radial-gradient(ellipse 62% 34% at 50% 52%, #000 0 42%, transparent 74%);
+  opacity: 0.75;
+  transform: rotate(-14deg);
+}
+
+/* スマホ端末風フレーム(少し傾けて置く) */
 .phoneFrame {
   position: relative;
-  width: min(240px, 62vw);
+  z-index: 1;
+  width: min(238px, 62vw);
   aspect-ratio: 9 / 19;
   overflow: hidden;
-  border: 9px solid var(--ink);
-  border-radius: 38px;
+  border: 9px solid #1d1d1f;
+  border-radius: 40px;
   background: #fff;
-  box-shadow: 0 28px 56px rgba(20, 20, 20, 0.22);
+  box-shadow: 24px 34px 60px rgba(20, 20, 20, 0.28);
+  transform: rotate(9deg);
 }
 
 /* ノッチ(パンチホール) */
@@ -2591,11 +2607,11 @@
 }
 
 .workCopy {
+  grid-area: copy;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: clamp(30px, 4.5vw, 70px);
 }
 
 .workEnglish {
@@ -2657,11 +2673,13 @@
   }
 
   .workItem {
+    grid-template-areas: "visual" "copy";
     grid-template-columns: 1fr;
+    padding: 20px 0;
   }
 
   .workVisual {
-    padding: 44px 24px;
+    padding: 50px 24px;
   }
 
   .workCopy h2 {

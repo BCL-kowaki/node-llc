@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description: "合同会社nodeが手がけたサービス・Webサイト・ブランドデザインの実績をご紹介します。",
 };
 
-type SoftStyle = CSSProperties & { "--work-soft": string };
+type SoftStyle = CSSProperties & { "--work-soft": string; "--work-accent": string };
 
 export default function WorkPage() {
   return (
@@ -37,7 +37,7 @@ export default function WorkPage() {
 
       <section className={styles.workList}>
         {works.map((work) => {
-          const softStyle: SoftStyle = { "--work-soft": work.soft };
+          const softStyle: SoftStyle = { "--work-soft": work.soft, "--work-accent": work.accent };
           return (
             <article key={work.slug} className={styles.workItem} style={softStyle}>
               <div className={styles.workVisual}>

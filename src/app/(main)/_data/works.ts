@@ -17,8 +17,10 @@ export type Work = {
   imageHeight: number;
   /** ロゴ等の正方形画像は contain 表示にする */
   imageContain?: boolean;
-  /** モックアップ背景のアクセント色 */
+  /** モックアップ背景のアクセント色(点描スウォッシュに使用) */
   soft: string;
+  /** 点描の濃い色 */
+  accent: string;
 };
 
 export const works: Work[] = [
@@ -36,6 +38,7 @@ export const works: Work[] = [
     imageWidth: 373,
     imageHeight: 554,
     soft: "#ffe2d8",
+    accent: "#f4713c",
   },
   {
     slug: "fukuoka-christmas-festa",
@@ -51,6 +54,7 @@ export const works: Work[] = [
     imageWidth: 370,
     imageHeight: 663,
     soft: "#ffdcdc",
+    accent: "#d94343",
   },
   {
     slug: "jelly",
@@ -66,5 +70,6 @@ export const works: Work[] = [
     imageHeight: 1254,
     imageContain: true,
     soft: "#e7ecf2",
+    accent: "#5f7d9c",
   },
 ];
