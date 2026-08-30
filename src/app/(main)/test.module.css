@@ -2050,7 +2050,13 @@
   }
 
   .detailHero {
+    /* スマホは固定の全画面高をやめ、コンテンツに合わせる */
+    min-height: auto;
     padding-top: 105px;
+  }
+
+  .detailHeroGrid {
+    min-height: auto;
   }
 
   .detailHeroGrid {
@@ -2059,7 +2065,7 @@
   }
 
   .detailHeroCopy {
-    min-height: 690px;
+    min-height: auto;
   }
 
   .detailHero h1 {
@@ -2190,12 +2196,12 @@
   }
 
   .detailHeroCopy {
-    min-height: 640px;
+    min-height: auto;
     padding: 30px 24px;
   }
 
   .detailEnglish {
-    margin-bottom: 55px;
+    margin-bottom: 30px;
   }
 
   .detailHeroGrid > .serviceVisual {
