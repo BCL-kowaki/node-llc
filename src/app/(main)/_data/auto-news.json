@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "slug": "2026-08-30-nvidia-hugging-face-acquisition-talks",
+    "date": "2026.08.30",
+    "dateISO": "2026-08-30",
+    "category": "AIニュース",
+    "title": "NVIDIA、Hugging Face買収へ協議と報道",
+    "body": [
+      "NVIDIAが、AIモデル共有プラットフォームを運営するHugging Faceを約129億ドル(約1兆9000億円規模)で買収する方向で協議を進めていると、米CNBCなど複数の海外メディアが2026年8月27日に報じました。",
+      "Hugging Faceは、世界中の開発者がAIモデルやデータセットを公開・共有するオープンソースコミュニティの中心的な存在です。GPUで生成AIの計算基盤を支配するNVIDIAがモデル流通のハブまで手にすることになれば、AI開発のインフラからエコシステムまでを一社が広くカバーする体制となり、業界構造への影響は小さくないと見られています。",
+      "オープンソースAIの中立性が保たれるのか、モデルの公開・利用条件が変わるのかは、AIを業務利用する企業にとっても無関係ではありません。自社のAI活用が特定ベンダーへ依存しすぎていないか、代替手段を持てているかを見直すきっかけになりそうです。"
+    ],
+    "sourceName": "CNBC",
+    "sourceUrl": "https://www.cnbc.com/2026/08/27/nvidia-hugging-face-acquisition.html"
+  },
+  {
+    "slug": "2026-08-30-ai-companies-joint-call-cyber-defense",
+    "date": "2026.08.30",
+    "dateISO": "2026-08-30",
+    "category": "AIニュース",
+    "title": "AI企業100社超、悪用AIへの防衛で結束を呼びかけ",
+    "body": [
+      "OpenAI、Anthropic、Googleをはじめとする100社超のAI関連企業が、制御を離れた・悪用されたAI(ローグAI)によるサイバー攻撃への防衛体制づくりを求める共同声明を発表したと、米TechCrunchが2026年8月27日に報じました。",
+      "生成AIの能力向上により、攻撃の自動化・高度化への懸念が現実味を帯びるなか、競合関係にある大手AI企業がそろって防衛側の連携を呼びかけるのは異例の動きです。声明では、政府・企業・研究機関が協調してAIによる攻撃への検知・対処能力を高める必要性が訴えられていると報じられています。",
+      "企業の現場にとっても、AIの導入と同時に「AIを悪用した攻撃を受ける側になる」リスクへの備えが求められる段階に入りつつあります。AI活用のルール整備とあわせて、セキュリティ体制の点検を進めておきたいところです。"
+    ],
+    "sourceName": "TechCrunch",
+    "sourceUrl": "https://techcrunch.com/2026/08/27/openai-anthropic-google-and-100-other-companies-call-for-action-to-defend-against-rogue-ai/"
+  }
+]
