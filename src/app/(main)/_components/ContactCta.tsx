@@ -19,7 +19,7 @@ export default function ContactCta() {
         </p>
         <Link className={styles.contactButton} href="/contact">
           お問い合わせ
-          <span aria-hidden="true">↗</span>
+          <span aria-hidden="true">{"↗\uFE0E"}</span>
         </Link>
       </div>
     </section>

@@ -77,7 +77,7 @@ export default function WorkPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    VIEW SITE <b aria-hidden="true">↗</b>
+                    VIEW SITE <b aria-hidden="true">{"↗\uFE0E"}</b>
                   </a>
                 )}
               </div>

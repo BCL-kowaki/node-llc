@@ -66,7 +66,7 @@ export default function TestHomePage() {
           </p>
           <a className={styles.primaryButton} href="#services">
             OUR SERVICES
-            <span aria-hidden="true">↘</span>
+            <span aria-hidden="true">{"↘\uFE0E"}</span>
           </a>
         </div>
 
@@ -124,7 +124,7 @@ export default function TestHomePage() {
                   <h3>{service.title}</h3>
                   <p>{service.cardCopy}</p>
                   <span className={styles.cardLink}>
-                    VIEW SERVICE <b aria-hidden="true">↗</b>
+                    VIEW SERVICE <b aria-hidden="true">{"↗\uFE0E"}</b>
                   </span>
                 </div>
                 <ServiceVisual service={service} compact />

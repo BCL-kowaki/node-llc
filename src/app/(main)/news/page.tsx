@@ -47,7 +47,7 @@ export default function NewsPage() {
               <span className={styles.newsCategory}>{post.category}</span>
               <span className={styles.newsTitle}>{post.title}</span>
               <b className={styles.newsArrow} aria-hidden="true">
-                ↗
+                {"↗\uFE0E"}
               </b>
             </Link>
           ))}

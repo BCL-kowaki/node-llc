@@ -90,7 +90,7 @@ export default function ContactForm() {
         disabled={status === "sending"}
       >
         {status === "sending" ? "送信中…" : "この内容で送信する"}
-        <span aria-hidden="true">↗</span>
+        <span aria-hidden="true">{"↗\uFE0E"}</span>
       </button>
 
       {status === "sent" && (

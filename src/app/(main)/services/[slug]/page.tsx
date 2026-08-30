@@ -105,7 +105,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
             <p className={styles.detailDescription}>{service.description}</p>
             <a className={styles.detailButton} href="#service-contact">
               このサービスについて相談する
-              <span aria-hidden="true">↘</span>
+              <span aria-hidden="true">{"↘\uFE0E"}</span>
             </a>
           </div>
           {/* 右側はイメージを置かず、枠内に背後の粒子アニメーションをうっすら見せる */}
@@ -186,7 +186,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
             <li key={deliverable}>
               <span>{String(index + 1).padStart(2, "0")}</span>
               {deliverable}
-              <i aria-hidden="true">↗</i>
+              <i aria-hidden="true">{"↗\uFE0E"}</i>
             </li>
           ))}
         </ol>
@@ -254,7 +254,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
               <span>{relatedService.number}</span>
               <h3>{relatedService.title}</h3>
               <p>{relatedService.cardCopy}</p>
-              <b aria-hidden="true">↗</b>
+              <b aria-hidden="true">{"↗\uFE0E"}</b>
             </Link>
           ))}
         </div>

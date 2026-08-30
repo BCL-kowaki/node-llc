@@ -36,7 +36,7 @@ export default function SiteHeader() {
         <Link href="/company">COMPANY</Link>
         <Link href="/news">NEWS</Link>
         <Link className={styles.navContact} href="/contact">
-          CONTACT <span aria-hidden="true">↗</span>
+          CONTACT <span aria-hidden="true">{"↗\uFE0E"}</span>
         </Link>
       </nav>
 

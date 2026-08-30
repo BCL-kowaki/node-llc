@@ -19,7 +19,7 @@ export default function NoteBanner() {
         <strong>代表・こわっきーのnoteで、現場のリアルとAI活用の実践知を発信中</strong>
       </span>
       <b className={styles.noteBannerArrow} aria-hidden="true">
-        ↗
+        {"↗\uFE0E"}
       </b>
     </a>
   );
