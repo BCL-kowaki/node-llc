@@ -1737,8 +1737,8 @@
 
   /* スマホではロゴを一回り小さく */
   .logo {
-    width: 116px;
-    height: 32px;
+    width: 96px;
+    height: 26px;
   }
 
   .mobileMenu > summary {
@@ -1761,17 +1761,28 @@
 
   .mobileMenu > summary span {
     display: block;
-    width: 15px;
     height: 1px;
     background: #fff;
-    transition: transform 180ms ease;
+    transition: transform 180ms ease, width 180ms ease;
   }
 
+  /* 上の線は長く、下の線は短い非対称トグル */
+  .mobileMenu > summary span:first-child {
+    width: 17px;
+  }
+
+  .mobileMenu > summary span:last-child {
+    width: 10px;
+  }
+
+  /* 開いたときは同じ長さに揃えて「×」にする */
   .mobileMenu[open] > summary span:first-child {
+    width: 16px;
     transform: translateY(4px) rotate(45deg);
   }
 
   .mobileMenu[open] > summary span:last-child {
+    width: 16px;
     transform: translateY(-4px) rotate(-45deg);
   }
 
