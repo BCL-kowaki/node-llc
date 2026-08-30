@@ -80,7 +80,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
   return (
     <main className={styles.site} style={accentStyle}>
       {/* メインビジュアルの白い下地(粒子キャンバスより背面) */}
-      <div className={styles.heroWhiteBackdrop} aria-hidden="true" />
+      <div className={styles.heroWhiteBackdrop} data-hero-backdrop aria-hidden="true" />
       <ParticleField colorFrom={hexToRgb(service.accent)} heroOnly />
       <SiteHeader />
 

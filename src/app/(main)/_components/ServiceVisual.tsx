@@ -22,7 +22,7 @@ export default function ServiceVisual({ service, compact = false }: { service: S
       aria-hidden="true"
     >
       <Image
-        src={`/test/generated/services/${service.slug}.png`}
+        src={`/test/generated/services/${service.slug}.webp`}
         alt=""
         fill
         sizes={compact ? "(max-width: 1080px) 100vw, 50vw" : "(max-width: 1080px) 100vw, 42vw"}

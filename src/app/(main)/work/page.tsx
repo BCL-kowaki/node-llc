@@ -20,7 +20,7 @@ export default function WorkPage() {
   return (
     <main className={styles.site}>
       {/* メインビジュアルの白い下地(粒子キャンバスより背面) */}
-      <div className={styles.heroWhiteBackdrop} aria-hidden="true" />
+      <div className={styles.heroWhiteBackdrop} data-hero-backdrop aria-hidden="true" />
       <ParticleField heroOnly />
       <SiteHeader />
 

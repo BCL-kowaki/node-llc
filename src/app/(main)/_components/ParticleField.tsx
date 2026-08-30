@@ -89,10 +89,20 @@ export default function ParticleField({
 
     const measureSections = () => {
       const statement = document.querySelector<HTMLElement>("[data-particle-statement]");
-      if (!statement) return;
-      const rect = statement.getBoundingClientRect();
-      statementStart = rect.top + window.scrollY;
-      statementHeight = Math.max(rect.height, window.innerHeight);
+      if (statement) {
+        const rect = statement.getBoundingClientRect();
+        statementStart = rect.top + window.scrollY;
+        statementHeight = Math.max(rect.height, window.innerHeight);
+      }
+
+      // 白い下敷きの高さをヒーローセクションの実高さに同期させる
+      // (スマホでヒーローが100svhより低い場合に、白が下の
+      //  セクションへはみ出すのを防ぐ)
+      const backdrop = document.querySelector<HTMLElement>("[data-hero-backdrop]");
+      const heroSection = document.querySelector<HTMLElement>("main section");
+      if (backdrop && heroSection) {
+        backdrop.style.height = `${heroSection.offsetHeight}px`;
+      }
     };
 
     const resizeCanvas = () => {
@@ -259,6 +269,8 @@ export default function ParticleField({
     };
 
     resizeCanvas();
+    // フォントや画像の読み込みで高さが変わるため、少し遅れて再計測する
+    const remeasureTimer = window.setTimeout(measureSections, 600);
     window.addEventListener("resize", resizeCanvas);
     window.addEventListener("scroll", handleScroll, { passive: true });
     document.addEventListener("visibilitychange", handleVisibility);
@@ -268,6 +280,7 @@ export default function ParticleField({
     animationFrame = window.requestAnimationFrame(draw);
 
     return () => {
+      window.clearTimeout(remeasureTimer);
       window.cancelAnimationFrame(animationFrame);
       window.removeEventListener("resize", resizeCanvas);
       window.removeEventListener("scroll", handleScroll);

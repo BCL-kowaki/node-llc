@@ -1835,9 +1835,11 @@
   }
 
   .hero {
-    min-height: 900px;
+    /* 固定の高さ指定をやめ、コンテンツに合わせる(ボタン下の大きな余白対策) */
+    min-height: auto;
     align-items: start;
     padding-top: 140px;
+    padding-bottom: 80px;
   }
 
   .heroFieldFallback {
@@ -2135,10 +2137,6 @@
 }
 
 @media (max-width: 480px) {
-  .hero {
-    min-height: 820px;
-  }
-
   .primaryButton,
   .detailButton,
   .contactButton {
