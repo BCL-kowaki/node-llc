@@ -1369,8 +1369,10 @@
 
 .supportGrid article > span {
   font-family: var(--font-heading), sans-serif;
-  font-size: 15px;
+  /* カード左上の番号(PC 56px / スマホは800px以下で48px) */
+  font-size: 56px;
   font-weight: 700;
+  line-height: 1;
 }
 
 .supportMark {
@@ -2043,7 +2045,6 @@
   .detailProcessList li > div > span,
   .detailEnglish,
   .painList li > span,
-  .supportGrid article > span,
   .faqBox summary span,
   .fitBox li span,
   .relatedGrid a > span {
@@ -2052,7 +2053,8 @@
 
   /* カード番号はスマホ 48px */
   .serviceMeta span:first-child,
-  .approachTop span:first-child {
+  .approachTop span:first-child,
+  .supportGrid article > span {
     font-size: 48px;
   }
 
