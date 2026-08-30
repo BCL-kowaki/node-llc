@@ -62,6 +62,14 @@ export default async function NewsArticlePage({ params }: NewsPageProps) {
           {post.body.map((paragraph) => (
             <p key={paragraph.slice(0, 24)}>{paragraph}</p>
           ))}
+          {post.sourceUrl && (
+            <p className={styles.contactNote}>
+              出典:{" "}
+              <a href={post.sourceUrl} target="_blank" rel="noopener noreferrer">
+                {post.sourceName ?? post.sourceUrl}
+              </a>
+            </p>
+          )}
           <Link className={styles.articleBack} href="/news">
             ← お知らせ一覧へ戻る
           </Link>
