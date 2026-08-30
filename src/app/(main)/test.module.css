@@ -203,8 +203,8 @@
 
 .hero h1 {
   margin: 0;
-  /* メインビジュアルの見出しサイズ(PC 78px / スマホは800px以下で44px) */
-  font-size: 78px;
+  /* メインビジュアルの見出しサイズ(PC 72px / スマホは800px以下で44px) */
+  font-size: 72px;
   font-weight: 800;
   letter-spacing: -0.085em;
   line-height: 0.95;
@@ -305,8 +305,8 @@
 .detailOverview h2,
 .deliverablesSection h2 {
   margin: 0;
-  /* セクション大見出しはサイズを統一(PC 72px / スマホは下部メディアクエリで 36px) */
-  font-size: 72px;
+  /* セクション大見出しはサイズを統一(PC 54px / スマホは下部メディアクエリで 36px) */
+  font-size: 54px;
   font-weight: 800;
   letter-spacing: -0.075em;
   line-height: 1.08;
@@ -1104,7 +1104,7 @@
 
 .companyProfileSection h2 {
   margin: 30px 0 0;
-  font-size: 72px;
+  font-size: 54px;
   font-weight: 800;
 }
 
@@ -1168,8 +1168,8 @@
 .detailHero h1 {
   max-width: 820px;
   margin: auto 0 28px;
-  /* トップページのh1に合わせる(PC 78px / スマホは800px以下で44px) */
-  font-size: 78px;
+  /* トップページのh1に合わせる(PC 72px / スマホは800px以下で44px) */
+  font-size: 72px;
   font-weight: 800;
 }
 
@@ -1297,7 +1297,7 @@
 
 .detailSectionHeading h2 {
   margin: 0;
-  font-size: 72px;
+  font-size: 54px;
   font-weight: 800;
   letter-spacing: -0.065em;
   line-height: 1.12;
