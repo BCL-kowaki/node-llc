@@ -1883,9 +1883,24 @@
   }
 
   .statementBody,
-  .sectionIntro,
   .detailSectionHeading {
     margin-top: 52px;
+  }
+
+  /* セクション上端からの距離は各セクションのpaddingで管理するため、
+     見出しブロック側のマージンは持たせない(余白の二重取り防止) */
+  .sectionIntro {
+    margin-top: 0;
+  }
+
+  .servicesSection {
+    /* padding-block の一括指定を打ち消し、内側の sectionIntro で余白を作る */
+    padding-top: 0;
+  }
+
+  .servicesSection .sectionIntro {
+    padding-top: 70px;
+    padding-bottom: 44px;
   }
 
   /* PC版を縦積みに変えた分、モバイルは従来の行間を維持する */
