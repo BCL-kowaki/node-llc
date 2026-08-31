@@ -1430,21 +1430,23 @@
 .supportMark::before {
   content: "";
   position: absolute;
-  inset: 22%;
+  /* リング半径は幅の38%。グリフ(62px)との間隔を広げ、
+     トップのAPPROACHアイコンと同じ余裕感にする */
+  inset: 12%;
   border: 1px solid color-mix(in srgb, var(--service-accent) 48%, transparent);
   border-radius: 50%;
   box-shadow: 0 0 0 13px color-mix(in srgb, var(--service-accent) 8%, transparent);
 }
 
-/* リング(半径は幅の28%)の円周上を回る小さな円 */
+/* リング(半径は幅の38%)の円周上を回る小さな円 */
 .supportMark::after {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: inherit;
   background:
-    radial-gradient(circle at 70% 30%, color-mix(in srgb, var(--service-accent) 80%, white) 0 3px, transparent 4px),
-    radial-gradient(circle at 30% 70%, color-mix(in srgb, var(--service-accent) 60%, white) 0 2px, transparent 3px);
+    radial-gradient(circle at 77% 23%, color-mix(in srgb, var(--service-accent) 80%, white) 0 3px, transparent 4px),
+    radial-gradient(circle at 23% 77%, color-mix(in srgb, var(--service-accent) 60%, white) 0 2px, transparent 3px);
   animation: orbitDot 16s linear infinite;
 }
 
