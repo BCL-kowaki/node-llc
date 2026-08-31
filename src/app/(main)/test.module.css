@@ -2795,25 +2795,36 @@
   .workItem {
     grid-template-areas: "visual" "copy";
     grid-template-columns: 1fr;
+    /* min-width:auto のままだと中の2台分の幅で記事が広がり画面外へはみ出す */
+    min-width: 0;
     padding: 20px 0;
   }
 
   .workVisual {
-    padding: 50px 24px;
+    min-width: 0;
+    padding: 44px 12px;
   }
 
   .workVisualPair {
-    gap: 10px;
+    gap: 8px;
   }
 
   .phoneFrame {
-    width: min(190px, 42vw);
-    border-width: 7px;
-    border-radius: 30px;
+    /* 2台+余白が画面幅に必ず収まるサイズにする */
+    width: min(150px, 34vw);
+    border-width: 6px;
+    border-radius: 26px;
+    /* 傾きを浅くして、回転で左右にはみ出す量も抑える */
+    transform: rotate(5deg);
+  }
+
+  .phoneFrame::before {
+    width: 40px;
+    height: 5px;
   }
 
   .phoneFrameSecond {
-    transform: rotate(-7deg) translateY(-16px);
+    transform: rotate(-4deg) translateY(-14px);
   }
 
   .workCopy h2 {
