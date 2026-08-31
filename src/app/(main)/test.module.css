@@ -671,10 +671,7 @@
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 98px;
-  background:
-    radial-gradient(circle at 78% 18%, color-mix(in srgb, var(--approach-icon) 72%, white) 0 3px, transparent 4px),
-    radial-gradient(circle at 22% 82%, color-mix(in srgb, var(--approach-icon) 68%, white) 0 2px, transparent 3px),
-    linear-gradient(145deg, #202631, #0d1118);
+  background: linear-gradient(145deg, #202631, #0d1118);
   box-shadow: 0 28px 60px rgba(14, 19, 27, 0.18);
 }
 
@@ -694,6 +691,19 @@
   border: 1px solid color-mix(in srgb, var(--approach-icon) 52%, transparent);
   border-radius: 50%;
   box-shadow: 0 0 0 18px color-mix(in srgb, var(--approach-icon) 8%, transparent);
+}
+
+/* 内側のリング上に置いた小さな円。レイヤーごと回してリングをなぞらせる
+   (リング半径は幅の34%。中心から34%の位置に点を置くと円周に重なる) */
+.approachShape::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    radial-gradient(circle at 74% 26%, color-mix(in srgb, var(--approach-icon) 72%, white) 0 3px, transparent 4px),
+    radial-gradient(circle at 26% 74%, color-mix(in srgb, var(--approach-icon) 68%, white) 0 2px, transparent 3px);
+  animation: orbitDot 14s linear infinite;
 }
 
 .approachShape svg {
@@ -1292,11 +1302,8 @@
 }
 
 .detailSectionHeading h2 {
-  margin-top: 30px;
-}
-
-.detailSectionHeading h2 {
-  margin: 0;
+  /* 英字ラベルとの間隔は全セクション共通で30px */
+  margin: 30px 0 0;
   font-size: 54px;
   font-weight: 800;
   letter-spacing: -0.065em;
@@ -1385,9 +1392,7 @@
   overflow: hidden;
   border: 1px solid color-mix(in srgb, var(--service-accent) 26%, transparent);
   border-radius: 92px;
-  background:
-    radial-gradient(circle at 72% 24%, color-mix(in srgb, var(--service-accent) 80%, white) 0 3px, transparent 4px),
-    linear-gradient(145deg, color-mix(in srgb, var(--service-accent) 15%, #202631), #0d1118 72%);
+  background: linear-gradient(145deg, color-mix(in srgb, var(--service-accent) 15%, #202631), #0d1118 72%);
   box-shadow: 0 24px 48px rgba(14, 19, 27, 0.17);
 }
 
@@ -1398,6 +1403,18 @@
   border: 1px solid color-mix(in srgb, var(--service-accent) 48%, transparent);
   border-radius: 50%;
   box-shadow: 0 0 0 13px color-mix(in srgb, var(--service-accent) 8%, transparent);
+}
+
+/* リング(半径は幅の28%)の円周上を回る小さな円 */
+.supportMark::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    radial-gradient(circle at 70% 30%, color-mix(in srgb, var(--service-accent) 80%, white) 0 3px, transparent 4px),
+    radial-gradient(circle at 30% 70%, color-mix(in srgb, var(--service-accent) 60%, white) 0 2px, transparent 3px);
+  animation: orbitDot 16s linear infinite;
 }
 
 .supportMark svg {
@@ -1432,7 +1449,7 @@
 }
 
 .deliverablesSection h2 {
-  margin-top: 70px;
+  margin-top: 30px;
 }
 
 .deliverablesSection > div > p:last-child {
@@ -1557,7 +1574,7 @@
 
 .fitBox h2,
 .faqBox h2 {
-  margin: 55px 0 42px;
+  margin: 30px 0 42px;
   font-size: 36px;
   letter-spacing: -0.055em;
   line-height: 1.15;
@@ -1666,8 +1683,10 @@
 
 .relatedGrid a > span {
   font-family: var(--font-heading), sans-serif;
-  font-size: 15px;
+  /* カード番号(PC 56px / スマホは800px以下で48px) */
+  font-size: 56px;
   font-weight: 700;
+  line-height: 1;
 }
 
 .relatedGrid h3 {
@@ -1808,7 +1827,7 @@
 
 @media (max-width: 800px) {
   .header {
-    padding: 18px 22px;
+    padding: 18px 10px;
   }
 
   .desktopNav {
@@ -1821,8 +1840,8 @@
 
   /* スマホではロゴを一回り小さく */
   .logo {
-    width: 96px;
-    height: 26px;
+    width: 100px;
+    height: 32px;
   }
 
   .mobileMenu > summary {
@@ -2046,15 +2065,15 @@
   .detailEnglish,
   .painList li > span,
   .faqBox summary span,
-  .fitBox li span,
-  .relatedGrid a > span {
+  .fitBox li span {
     font-size: 12px;
   }
 
   /* カード番号はスマホ 48px */
   .serviceMeta span:first-child,
   .approachTop span:first-child,
-  .supportGrid article > span {
+  .supportGrid article > span,
+  .relatedGrid a > span {
     font-size: 48px;
   }
 
@@ -2343,7 +2362,9 @@
   .companyImageDots,
   .contactDots,
   .scrollCue::after,
-  .heroFieldFallback {
+  .heroFieldFallback,
+  .approachShape::after,
+  .supportMark::after {
     animation: none;
   }
 
@@ -2865,5 +2886,12 @@
     margin-bottom: 26px;
     padding: 16px 18px;
     font-size: 14px;
+  }
+}
+
+/* アイコン内の小さな円が、リングをなぞって周回する */
+@keyframes orbitDot {
+  to {
+    transform: rotate(360deg);
   }
 }
