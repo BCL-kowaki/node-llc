@@ -816,7 +816,8 @@
   align-items: flex-end;
   justify-content: center;
   overflow: hidden;
-  background: #fff;
+  /* イラストは背景透過PNG。白の下地を敷かず、セクションの地色を活かす */
+  background: transparent;
 }
 
 .companyImageDots {
