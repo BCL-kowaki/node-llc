@@ -1281,9 +1281,9 @@
 .detailOverviewBody {
   display: grid;
   grid-template-areas:
-    "visual title"
-    "visual text";
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    "title visual"
+    "text visual";
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
   grid-template-rows: auto 1fr;
   column-gap: clamp(32px, 5vw, 76px);
   align-items: start;
