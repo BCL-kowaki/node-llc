@@ -8,6 +8,9 @@ import SiteFooter from "../_components/SiteFooter";
 import SiteHeader from "../_components/SiteHeader";
 import styles from "../test.module.css";
 
+// 粒子の色(MESSAGEセクションでも色を変えず、青のまま見せる)
+const PARTICLE_BLUE: [number, number, number] = [30, 92, 190];
+
 export const metadata: Metadata = {
   title: "会社概要 | 合同会社node",
   description: "合同会社nodeの代表メッセージと会社概要をご紹介します。",
@@ -18,7 +21,7 @@ export default function CompanyPage() {
     <main className={styles.site}>
       {/* メインビジュアルの白い下地(粒子キャンバスより背面) */}
       <div className={styles.heroWhiteBackdrop} data-hero-backdrop aria-hidden="true" />
-      <ParticleField heroOnly compactOnMobile />
+      <ParticleField colorFrom={PARTICLE_BLUE} colorTo={PARTICLE_BLUE} compactOnMobile />
       <SiteHeader />
 
       <section className={`${styles.detailHero} ${styles.companyHero}`}>
@@ -34,7 +37,7 @@ export default function CompanyPage() {
         </p>
       </section>
 
-      <section id="company" className={styles.companySection}>
+      <section id="company" className={styles.companySection} data-particle-statement>
         <p className={styles.sectionLabel}>MESSAGE</p>
         <div className={styles.companyImageWrap}>
           <div className={styles.companyImageDots} aria-hidden="true" />

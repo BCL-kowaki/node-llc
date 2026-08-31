@@ -800,7 +800,9 @@
 .companySection {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background: var(--paper-deep);
+  /* 地色は --paper-deep(#ebe9e3)。背後の粒子アニメーションを
+     うっすら透かすため、わずかに透明度を持たせている */
+  background: rgba(235, 233, 227, 0.82);
 }
 
 /* 英字ラベルは他セクションと同じく、セクションの左上に置く */
