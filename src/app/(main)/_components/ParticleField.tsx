@@ -25,6 +25,8 @@ type ParticleFieldProps = {
   colorTo?: [number, number, number];
   /** true でヒーロー領域のみに表示する(下層ページ用) */
   heroOnly?: boolean;
+  /** true でスマホ時に球体を小さくする(コピーの可読性を優先するページ用) */
+  compactOnMobile?: boolean;
 };
 
 const GOLDEN_ANGLE = Math.PI * (3 - Math.sqrt(5));
@@ -59,6 +61,7 @@ export default function ParticleField({
   colorFrom = DEFAULT_BLUE,
   colorTo,
   heroOnly = false,
+  compactOnMobile = false,
 }: ParticleFieldProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const colorEnd = colorTo ?? (colorFrom === DEFAULT_BLUE ? DEFAULT_GREEN : colorFrom);
@@ -152,7 +155,12 @@ export default function ParticleField({
         const blueChannel = Math.round(colorFrom[2] + (colorEnd[2] - colorFrom[2]) * statementMix);
         // ヒーローでは右端に「半分だけ見える」大きな真球体を置き、
         // セクション1では従来の位置・形(横長)へ遷移する
-        const heroRadius = Math.max(Math.min(width * 0.45, height * 0.78, 940), 380);
+        // スマホでは最小半径380pxが画面幅を超えて全面を覆ってしまうため、
+        // compactOnMobile 指定時は画面の半分程度に収まるサイズにする
+        const heroRadius =
+          compactOnMobile && width < 720
+            ? Math.min(width * 0.5, height * 0.3)
+            : Math.max(Math.min(width * 0.45, height * 0.78, 940), 380);
         const statementRadius = Math.max(width * 0.52, 520);
         const radiusX = heroRadius + (statementRadius - heroRadius) * statementMix;
         // ヒーローは縦横比1:1(真球)、セクション1では従来の0.5へ
@@ -289,7 +297,7 @@ export default function ParticleField({
       window.removeEventListener("pointerout", handlePointerOut);
       window.removeEventListener("pointerdown", handlePointerDown);
     };
-  }, [colorFrom, colorEnd, heroOnly]);
+  }, [colorFrom, colorEnd, heroOnly, compactOnMobile]);
 
   return <canvas ref={canvasRef} className={styles.particleCanvas} aria-hidden="true" />;
 }

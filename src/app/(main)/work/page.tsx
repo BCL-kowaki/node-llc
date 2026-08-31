@@ -21,7 +21,7 @@ export default function WorkPage() {
     <main className={styles.site}>
       {/* メインビジュアルの白い下地(粒子キャンバスより背面) */}
       <div className={styles.heroWhiteBackdrop} data-hero-backdrop aria-hidden="true" />
-      <ParticleField heroOnly />
+      <ParticleField heroOnly compactOnMobile />
       <SiteHeader />
 
       <section className={`${styles.detailHero} ${styles.companyHero}`}>

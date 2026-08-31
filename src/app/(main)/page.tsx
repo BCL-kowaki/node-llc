@@ -45,7 +45,7 @@ export default function TestHomePage() {
     <main className={styles.site}>
       {/* メインビジュアルの白い下地(粒子キャンバスより背面) */}
       <div className={styles.heroWhiteBackdrop} data-hero-backdrop aria-hidden="true" />
-      <ParticleField />
+      <ParticleField compactOnMobile />
       <SiteHeader />
 
       <section className={styles.hero} data-particle-hero>
