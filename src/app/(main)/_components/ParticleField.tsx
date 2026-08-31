@@ -78,7 +78,10 @@ export default function ParticleField({
     let devicePixelRatio = 1;
     let height = 0;
     // 「面」として見えるよう、十分な密度を確保する。
-    let particles = createParticles(window.innerWidth < 720 ? 5200 : 18000);
+    // スマホの大きな球体は画面に映る範囲が狭いぶん、粒子数を増やす
+    const particleCount = (w: number) =>
+      w < 720 ? (compactOnMobile ? 15000 : 5200) : 18000;
+    let particles = createParticles(particleCount(window.innerWidth));
     let scrollPosition = window.scrollY;
     let statementStart = window.innerHeight;
     let statementHeight = window.innerHeight;
@@ -117,7 +120,7 @@ export default function ParticleField({
       canvas.style.width = `${width}px`;
       canvas.style.height = `${height}px`;
       context.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
-      particles = createParticles(width < 720 ? 5200 : 18000);
+      particles = createParticles(particleCount(width));
       measureSections();
     };
 
@@ -159,8 +162,12 @@ export default function ParticleField({
         // 画面いっぱいに広がるサイズにする。同じ粒子数を広い面に
         // 散らすため密度が下がり、コピーの視認性も確保できる
         const isCompactMobile = compactOnMobile && width < 720;
+        // スマホは「画面右半分に球体の左半分だけが見え、その弧が
+        // 画面の上下いっぱいに届く」形にする。
+        // 左端が画面中央(w/2)、上下端が画面右端(w)を通る円の半径は
+        // R = (H^2 + W^2) / 4W で求まる
         const heroRadius = isCompactMobile
-          ? Math.min(width * 0.68, height * 0.38)
+          ? (height * height + width * width) / (4 * width)
           : Math.max(Math.min(width * 0.45, height * 0.78, 940), 380);
         const statementRadius = Math.max(width * 0.52, 520);
         const radiusX = heroRadius + (statementRadius - heroRadius) * statementMix;
@@ -169,7 +176,8 @@ export default function ParticleField({
         // マウス位置に合わせて球体全体をわずかに視差移動させる
         const parallaxX = pointerTarget.active ? (pointer.x - width * 0.5) * 0.045 : 0;
         const parallaxY = pointerTarget.active ? (pointer.y - height * 0.5) * 0.03 : 0;
-        const heroCenterX = width * (isCompactMobile ? 0.5 : 1.0);
+        // スマホは円の左端が画面中央に来るよう、中心を画面外の右へ置く
+        const heroCenterX = isCompactMobile ? width * 0.5 + heroRadius : width;
         const statementCenterX = width * 0.79;
         const centerX =
           heroCenterX + (statementCenterX - heroCenterX) * statementMix + parallaxX;
