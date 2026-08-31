@@ -12,6 +12,9 @@ const nextConfig: NextConfig = {
       { source: "/test/contact", destination: "/contact", permanent: true },
       { source: "/test/news", destination: "/news", permanent: true },
       { source: "/test/news/:slug", destination: "/news/:slug", permanent: true },
+      // Work → Participation への名称変更に伴う旧URLの吸収
+      { source: "/work", destination: "/participation", permanent: true },
+      { source: "/test/work", destination: "/participation", permanent: true },
     ];
   },
 };

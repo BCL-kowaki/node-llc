@@ -10,13 +10,13 @@ import { works } from "../_data/works";
 import styles from "../test.module.css";
 
 export const metadata: Metadata = {
-  title: "実績 | 合同会社node",
-  description: "合同会社nodeが手がけたサービス・Webサイト・ブランドデザインの実績をご紹介します。",
+  title: "参画プロジェクト | 合同会社node",
+  description: "合同会社nodeが参画している、サービス開発・Webサイト制作・ブランドづくりのプロジェクトをご紹介します。",
 };
 
 type SoftStyle = CSSProperties & { "--work-soft": string; "--work-accent": string };
 
-export default function WorkPage() {
+export default function ParticipationPage() {
   return (
     <main className={styles.site}>
       {/* メインビジュアルの白い下地(粒子キャンバスより背面) */}
@@ -28,11 +28,13 @@ export default function WorkPage() {
         <div className={styles.breadcrumbs}>
           <Link href="/">TOP</Link>
           <span>/</span>
-          <span>WORK</span>
+          <span>PARTICIPATION</span>
         </div>
-        <p className={styles.detailEnglish}>WORK</p>
-        <h1>実績</h1>
-        <p className={styles.detailLead}>nodeが手がけたプロダクト、参画しているプロジェクトの一部をご紹介します。</p>
+        <p className={styles.detailEnglish}>PARTICIPATION</p>
+        <h1>参画プロジェクト</h1>
+        <p className={styles.detailLead}>
+          nodeがチームの一員として参画し、いま一緒に前へ進めているプロジェクトです。
+        </p>
       </section>
 
       <section className={styles.workList}>
