@@ -32,7 +32,7 @@ export default function WorkPage() {
         </div>
         <p className={styles.detailEnglish}>WORK</p>
         <h1>実績</h1>
-        <p className={styles.detailLead}>nodeが手がけたプロジェクトの一部をご紹介します。</p>
+        <p className={styles.detailLead}>nodeが手がけたプロダクト、参画しているプロジェクトの一部をご紹介します。</p>
       </section>
 
       <section className={styles.workList}>
