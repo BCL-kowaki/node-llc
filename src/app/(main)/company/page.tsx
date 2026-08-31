@@ -42,10 +42,10 @@ export default function CompanyPage() {
         <div className={styles.companyImageWrap}>
           <div className={styles.companyImageDots} aria-hidden="true" />
           <Image
-            src="/test/profile-transparent.png"
+            src="/test/profile-illust.png"
             alt="合同会社node CEO 小脇拓哉"
-            width={1023}
-            height={1537}
+            width={396}
+            height={654}
             sizes="(max-width: 800px) 84vw, 42vw"
             unoptimized
             className={styles.companyImage}
