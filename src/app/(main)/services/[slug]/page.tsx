@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowTrendUp, faCompass, faCubes, faNetworkWired } from "@fortawesome/free-solid-svg-icons";
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { CSSProperties } from "react";
@@ -127,12 +128,23 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
 
       <section className={styles.detailOverview}>
         <p className={styles.sectionLabel}>OVERVIEW</p>
-        <div>
+        <div className={styles.detailOverviewBody}>
           <h2>
             手段ではなく<span className={styles.serifPunct}>、</span>
             <br />
             変化から設計する。
           </h2>
+          {/* トップページのサービスカードと同じビジュアル
+              (PCは左カラム、スマホは見出しの下に表示) */}
+          <div className={styles.detailOverviewVisual}>
+            <Image
+              src={`/test/generated/services/${service.slug}.webp`}
+              alt=""
+              width={1200}
+              height={760}
+              unoptimized
+            />
+          </div>
           <p>{service.overview}</p>
         </div>
       </section>

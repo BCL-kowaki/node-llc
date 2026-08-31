@@ -1273,12 +1273,40 @@
 }
 
 .detailOverview h2 {
+  grid-area: title;
+  margin: 0 0 30px;
+}
+
+/* OVERVIEW: PCは画像を左カラム、スマホは見出しの下に置く */
+.detailOverviewBody {
+  display: grid;
+  grid-template-areas:
+    "visual title"
+    "visual text";
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  grid-template-rows: auto 1fr;
+  column-gap: clamp(32px, 5vw, 76px);
+  align-items: start;
   margin-top: 30px;
 }
 
+.detailOverviewVisual {
+  grid-area: visual;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--service-soft, var(--paper-deep));
+}
+
+.detailOverviewVisual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .detailOverview > div > p {
+  grid-area: text;
   max-width: 820px;
-  margin: 50px 0 0;
+  margin: 0;
   color: rgba(20, 20, 20, 0.68);
   font-size: 16px;
   line-height: 2.1;
@@ -2226,6 +2254,19 @@
 
   .detailOverview {
     padding-block: 100px;
+  }
+
+  .detailOverviewBody {
+    grid-template-areas:
+      "title"
+      "visual"
+      "text";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  .detailOverviewVisual {
+    margin-bottom: 30px;
   }
 
   .detailSectionHeading > p:last-child {
