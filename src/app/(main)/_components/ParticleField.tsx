@@ -153,14 +153,15 @@ export default function ParticleField({
         const red = Math.round(colorFrom[0] + (colorEnd[0] - colorFrom[0]) * statementMix);
         const greenChannel = Math.round(colorFrom[1] + (colorEnd[1] - colorFrom[1]) * statementMix);
         const blueChannel = Math.round(colorFrom[2] + (colorEnd[2] - colorFrom[2]) * statementMix);
-        // ヒーローでは右端に「半分だけ見える」大きな真球体を置き、
-        // セクション1では従来の位置・形(横長)へ遷移する
-        // スマホでは最小半径380pxが画面幅を超えて全面を覆ってしまうため、
-        // compactOnMobile 指定時は画面の半分程度に収まるサイズにする
-        const heroRadius =
-          compactOnMobile && width < 720
-            ? Math.min(width * 0.5, height * 0.3)
-            : Math.max(Math.min(width * 0.45, height * 0.78, 940), 380);
+        // PCでは右端に「半分だけ見える」大きな真球体を置き、
+        // セクション1では従来の位置・形(横長)へ遷移する。
+        // スマホ(compactOnMobile)では球体を画面中央に置き、
+        // 画面いっぱいに広がるサイズにする。同じ粒子数を広い面に
+        // 散らすため密度が下がり、コピーの視認性も確保できる
+        const isCompactMobile = compactOnMobile && width < 720;
+        const heroRadius = isCompactMobile
+          ? Math.min(width * 0.68, height * 0.38)
+          : Math.max(Math.min(width * 0.45, height * 0.78, 940), 380);
         const statementRadius = Math.max(width * 0.52, 520);
         const radiusX = heroRadius + (statementRadius - heroRadius) * statementMix;
         // ヒーローは縦横比1:1(真球)、セクション1では従来の0.5へ
@@ -168,7 +169,10 @@ export default function ParticleField({
         // マウス位置に合わせて球体全体をわずかに視差移動させる
         const parallaxX = pointerTarget.active ? (pointer.x - width * 0.5) * 0.045 : 0;
         const parallaxY = pointerTarget.active ? (pointer.y - height * 0.5) * 0.03 : 0;
-        const centerX = width * (1.0 - statementMix * 0.21) + parallaxX;
+        const heroCenterX = width * (isCompactMobile ? 0.5 : 1.0);
+        const statementCenterX = width * 0.79;
+        const centerX =
+          heroCenterX + (statementCenterX - heroCenterX) * statementMix + parallaxX;
         const heroCenterY = height * (0.5 + heroProgress * 0.35);
         const statementCenterY = height * (1.03 - statementProgress * 0.42);
         const centerY = heroCenterY * (1 - statementMix) + statementCenterY * statementMix + parallaxY;
