@@ -45,7 +45,7 @@ export const works: Work[] = [
       "「すべてのバスケファンに、ワクワクを。」を掲げ、少年バスケットボールの活動に貢献するプロジェクト「YeLL」。バスケの指導者チームが立ち上げた、現場の課題を知る人たちによる取り組みです。",
       "U18以下のカテゴリは、教員を含むボランティア指導者に運営の負担が集中しているという課題があります。YeLLは大会情報と試合結果を保護者一人ひとりへ最短で届ける仕組みで指導者の連絡負担をなくし、頑張る選手へのメダル贈呈や大会運営のペーパーレス化まで、民間企業の強みを活かして少年バスケの環境を整えています。nodeはこの取り組みにサービス開発の面から参画しています。",
     ],
-    url: "https://yell-basketball.com/reyell/",
+    url: "https://yell-basketball.jp/",
     images: [
       { src: "/work/yell-basketball.png", width: 370, height: 802 },
       { src: "/work/yell-sns.png", width: 370, height: 802 },
