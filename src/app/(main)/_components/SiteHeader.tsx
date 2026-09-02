@@ -32,7 +32,6 @@ export default function SiteHeader() {
       <nav className={styles.desktopNav} aria-label="メインナビゲーション">
         <Link href="/#services">SERVICES</Link>
         <Link href="/#approach">APPROACH</Link>
-        <Link href="/participation">PARTICIPATION</Link>
         <Link href="/company">COMPANY</Link>
         <Link href="/news">NEWS</Link>
         <Link className={styles.navContact} href="/contact">
@@ -61,7 +60,6 @@ export default function SiteHeader() {
               </Link>
             ))}
             <Link href="/news">NEWS</Link>
-            <Link href="/participation">PARTICIPATION</Link>
             <Link href="/company">ABOUT</Link>
             <Link href="/contact">CONTACT</Link>
           </nav>
