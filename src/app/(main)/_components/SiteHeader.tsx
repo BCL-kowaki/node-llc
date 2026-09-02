@@ -2,16 +2,30 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useRef } from "react";
 import { services } from "../_data/services";
 import styles from "../test.module.css";
 
 export default function SiteHeader() {
   const menuRef = useRef<HTMLDetailsElement>(null);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   // リンクをタップしたらメニューを閉じる(同一ページ内アンカーでも閉じるように)
   const closeMenu = () => {
     menuRef.current?.removeAttribute("open");
+  };
+
+  // トップページ内のアンカーリンク: Next.jsのLinkは同一パス+hash変更だけだと
+  // スクロールが発火しない(かつ背景の粒子アニメーションが重く、smoothスクロールだと
+  // 動き出す前に止まって見える)ため、トップページ滞在中はここで直接ジャンプさせる。
+  // 他ページからの遷移時はNext.jsのLinkによる通常の画面遷移に任せる。
+  const handleAnchorClick = (id: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!isHome) return;
+    e.preventDefault();
+    document.getElementById(id)?.scrollIntoView({ behavior: "instant" as ScrollBehavior });
+    history.replaceState(null, "", `/#${id}`);
   };
 
   return (
@@ -30,12 +44,16 @@ export default function SiteHeader() {
       </Link>
 
       <nav className={styles.desktopNav} aria-label="メインナビゲーション">
-        <Link href="/#services">SERVICES</Link>
-        <Link href="/#approach">APPROACH</Link>
+        <Link href="/#services" onClick={handleAnchorClick("services")}>
+          SERVICES
+        </Link>
+        <Link href="/#approach" onClick={handleAnchorClick("approach")}>
+          APPROACH
+        </Link>
         <Link href="/company">COMPANY</Link>
         <Link href="/news">NEWS</Link>
         <Link className={styles.navContact} href="/contact">
-          CONTACT <span aria-hidden="true">{"↗\uFE0E"}</span>
+          CONTACT <span aria-hidden="true">{"↗︎"}</span>
         </Link>
       </nav>
 
@@ -48,7 +66,9 @@ export default function SiteHeader() {
           <p>MENU</p>
           <nav aria-label="モバイルナビゲーション" onClick={closeMenu}>
             <Link href="/">TOP</Link>
-            <Link href="/#services">SERVICE</Link>
+            <Link href="/#services" onClick={handleAnchorClick("services")}>
+              SERVICE
+            </Link>
             {services.map((service) => (
               <Link
                 key={service.slug}

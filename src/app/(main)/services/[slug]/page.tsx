@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { CSSProperties } from "react";
+import AnchorButton from "../../_components/AnchorButton";
 import ContactCta from "../../_components/ContactCta";
 import ParticleField from "../../_components/ParticleField";
 import SiteFooter from "../../_components/SiteFooter";
@@ -104,10 +105,10 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
             </h1>
             <p className={styles.detailLead}>{service.lead}</p>
             <p className={styles.detailDescription}>{service.description}</p>
-            <a className={styles.detailButton} href="#service-contact">
+            <AnchorButton id="service-contact" className={styles.detailButton}>
               このサービスについて相談する
               <span aria-hidden="true">{"↘\uFE0E"}</span>
-            </a>
+            </AnchorButton>
           </div>
           {/* 右側はイメージを置かず、枠内に背後の粒子アニメーションをうっすら見せる */}
           <div className={styles.detailHeroVisualBlank} aria-hidden="true" />

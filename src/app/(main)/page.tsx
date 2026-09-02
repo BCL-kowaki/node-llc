@@ -1,7 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowTrendUp, faCubes, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import AnchorButton from "./_components/AnchorButton";
 import ContactCta from "./_components/ContactCta";
+import HashScrollOnMount from "./_components/HashScrollOnMount";
 import ParticleField from "./_components/ParticleField";
 import ServiceVisual from "./_components/ServiceVisual";
 import SiteFooter from "./_components/SiteFooter";
@@ -46,6 +48,7 @@ export default function TestHomePage() {
       {/* メインビジュアルの白い下地(粒子キャンバスより背面) */}
       <div className={styles.heroWhiteBackdrop} data-hero-backdrop aria-hidden="true" />
       <ParticleField compactOnMobile />
+      <HashScrollOnMount />
       <SiteHeader />
 
       <section className={styles.hero} data-particle-hero>
@@ -64,10 +67,10 @@ export default function TestHomePage() {
             <br />
             nodeは、成果が出るまで隣を走り続ける伴走パートナーです。
           </p>
-          <a className={styles.primaryButton} href="#services">
+          <AnchorButton id="services" className={styles.primaryButton}>
             OUR SERVICES
             <span aria-hidden="true">{"↘\uFE0E"}</span>
-          </a>
+          </AnchorButton>
         </div>
 
         <p className={styles.scrollCue}>SCROLL TO EXPLORE</p>
