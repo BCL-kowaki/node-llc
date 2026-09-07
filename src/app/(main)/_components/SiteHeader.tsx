@@ -50,6 +50,7 @@ export default function SiteHeader() {
         <Link href="/#approach" onClick={handleAnchorClick("approach")}>
           APPROACH
         </Link>
+        <Link href="/participation">PARTICIPATION</Link>
         <Link href="/company">COMPANY</Link>
         <Link href="/news">NEWS</Link>
         <Link className={styles.navContact} href="/contact">
@@ -80,6 +81,7 @@ export default function SiteHeader() {
               </Link>
             ))}
             <Link href="/news">NEWS</Link>
+            <Link href="/participation">PARTICIPATION</Link>
             <Link href="/company">ABOUT</Link>
             <Link href="/contact">CONTACT</Link>
           </nav>
