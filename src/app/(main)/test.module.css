@@ -1593,10 +1593,63 @@
   background: var(--paper-deep);
 }
 
-.demoGrid {
+.demoToolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 34px;
+}
+
+.demoControls {
+  display: flex;
+  gap: 10px;
+}
+
+.demoControls button {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 19px;
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.demoControls button:hover {
+  background: var(--ink);
+  color: #fff;
+}
+
+.demoAllLink {
+  display: inline-flex;
+  gap: 18px;
+  align-items: center;
+  border-bottom: 1px solid currentColor;
+  color: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 2.2;
+  text-decoration: none;
+}
+
+.demoSlider {
+  display: grid;
+  grid-auto-columns: minmax(360px, calc((100% - 36px) / 2.15));
+  grid-auto-flow: column;
   gap: clamp(24px, 3vw, 40px);
+  overflow-x: auto;
+  padding: 8px 2px 28px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+}
+
+.demoSlider .demoCard {
+  scroll-snap-align: start;
 }
 
 .demoCard {
@@ -1610,7 +1663,9 @@
   display: block;
   overflow: hidden;
   border-radius: 12px;
-  background: var(--paper);
+  background:
+    radial-gradient(circle at 72% 24%, color-mix(in srgb, var(--service-accent, #f0a83a) 16%, transparent), transparent 36%),
+    #f5f3ee;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -1622,6 +1677,35 @@
   display: block;
   width: 100%;
   height: auto;
+}
+
+.demoArchive {
+  min-height: 100vh;
+  padding: 132px clamp(24px, 7vw, 100px) 140px;
+  background: var(--paper-deep);
+}
+
+.demoArchiveLead {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  margin: 96px 0 72px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--ink);
+}
+
+.demoArchiveLead > p:last-child {
+  max-width: 520px;
+  margin: 0;
+  color: rgba(20, 20, 20, 0.65);
+  line-height: 1.9;
+}
+
+.demoArchiveGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 72px clamp(28px, 4vw, 64px);
 }
 
 .demoCaption {
@@ -2212,12 +2296,22 @@
   .serviceList,
   .approachGrid,
   .supportGrid,
-  .demoGrid,
+  .demoArchiveGrid,
   .relatedGrid {
     grid-template-columns: 1fr;
   }
 
-  .demoGrid {
+  .demoSlider {
+    grid-auto-columns: min(86vw, 440px);
+  }
+
+  .demoArchiveLead {
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 70px 0 54px;
+  }
+
+  .demoArchiveGrid {
     gap: 56px;
   }
 
