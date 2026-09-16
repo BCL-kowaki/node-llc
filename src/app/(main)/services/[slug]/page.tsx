@@ -225,6 +225,41 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
         </ol>
       </section>
 
+      {service.demos && service.demos.length > 0 && (
+        <section className={styles.demoSection}>
+          <div className={styles.detailSectionHeading}>
+            <p className={styles.sectionLabel}>DEMO</p>
+            <h2>
+              実際につくった<span className={styles.serifPunct}>、</span>
+              デモサイト。
+            </h2>
+            <p>架空の店舗・人物を題材に制作した提案用デモです。実際の画面をご覧いただけます。</p>
+          </div>
+          <div className={styles.demoGrid}>
+            {service.demos.map((demo) => (
+              <a key={demo.title} className={styles.demoCard} href={demo.url} target="_blank" rel="noopener noreferrer">
+                <span className={styles.demoImageWrap}>
+                  <Image
+                    src={demo.image}
+                    alt={`${demo.title}のデモサイトを表示したノートPCとスマートフォンの画面`}
+                    width={1600}
+                    height={1200}
+                    unoptimized
+                  />
+                </span>
+                <span className={styles.demoCaption}>
+                  <b>{demo.title}</b>
+                  <span>{demo.note}</span>
+                </span>
+                <span className={styles.demoLink}>
+                  デモを見る <i aria-hidden="true">{"↗︎"}</i>
+                </span>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
+
       <section className={styles.fitSection}>
         <div className={styles.fitBox}>
           <p className={styles.sectionLabel}>GOOD FIT FOR</p>

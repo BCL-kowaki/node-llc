@@ -3,6 +3,16 @@ export type ServiceStep = {
   description: string;
 };
 
+export type ServiceDemo = {
+  title: string;
+  /** 制作意図・見どころの一言 */
+  note: string;
+  /** ノートPC+スマホのモックアップ合成画像 */
+  image: string;
+  /** クリック時に開く実際のデモサイトURL */
+  url: string;
+};
+
 export type Service = {
   number: string;
   slug: string;
@@ -21,6 +31,8 @@ export type Service = {
   deliverables: string[];
   outcomes: string[];
   process: ServiceStep[];
+  /** サービス詳細ページの「進め方」直後に表示するデモサイト一覧(任意) */
+  demos?: ServiceDemo[];
   idealFor: string[];
   faqs: Array<{ question: string; answer: string }>;
   related: string[];
@@ -144,6 +156,26 @@ export const services: Service[] = [
       { title: "構成・表現", description: "情報の順番、コピー、デザイン方針を決めます。" },
       { title: "制作・実装", description: "各画面を制作し、端末ごとの表示を整えます。" },
       { title: "公開・改善", description: "公開準備を行い、更新と改善の流れをつくります。" },
+    ],
+    demos: [
+      {
+        title: "喫茶 なぎ",
+        note: "落ち着いた店内の空気感を、写真とタイポグラフィで伝えるカフェサイト。",
+        image: "/services/web-production/mockups/cafe.png",
+        url: "/services/web-production/demo/cafe/",
+      },
+      {
+        title: "ほおばる",
+        note: "商品の魅力を主役にした、シュークリーム専門店のブランドサイト。",
+        image: "/services/web-production/mockups/sweets.png",
+        url: "/services/web-production/demo/sweets/",
+      },
+      {
+        title: "濱上拓哉 AI Graphic Creator",
+        note: "世界観の強いビジュアルを主役に据えた、AIグラフィッククリエイターのポートフォリオサイト。",
+        image: "/services/web-production/mockups/portfolio.png",
+        url: "/services/web-production/demo/portfolio/",
+      },
     ],
     idealFor: ["サイトを営業・採用に活かしたい", "事業の見せ方から相談したい", "公開後も自社で情報を更新したい"],
     faqs: [
