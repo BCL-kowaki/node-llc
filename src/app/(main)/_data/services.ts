@@ -142,8 +142,8 @@ export const services: Service[] = [
         image: "/services/system-development/mockups/ec.png",
       },
       {
-        title: "SNS運用管理ツール",
-        note: "複数SNSの投稿予約、コメント対応、フォロワー分析を一元化する運用ダッシュボード。",
+        title: "自社独自SNSの構築",
+        note: "投稿・フォロー・コメント・DMを備えた自社独自のSNSを構築。会員コミュニティやファン向けサービスを、運営用の管理画面とあわせて開発。",
         image: "/services/system-development/mockups/sns.png",
       },
       {
