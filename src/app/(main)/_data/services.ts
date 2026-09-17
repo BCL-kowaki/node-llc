@@ -188,6 +188,18 @@ export const services: Service[] = [
         image: "/services/web-production/mockups/portfolio-device.png",
         url: "/services/web-production/demo/portfolio/",
       },
+      {
+        title: "法律事務所サンプル",
+        note: "穏やかな信頼感を軸に、事務所の姿勢と相談への導線を伝える法律事務所サイト。",
+        image: "/services/web-production/mockups/nagi-law-device.png",
+        url: "/services/nagi-law-demo/",
+      },
+      {
+        title: "SaaSプロダクトサンプル",
+        note: "人事・労務管理クラウドの機能と導入メリットを、体験導線とともに伝えるプロダクトサイト。",
+        image: "/services/web-production/mockups/somuri-device.png",
+        url: "/services/somuri-demo/",
+      },
     ],
     idealFor: ["サイトを営業・採用に活かしたい", "事業の見せ方から相談したい", "公開後も自社で情報を更新したい"],
     faqs: [
