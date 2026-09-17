@@ -4,7 +4,7 @@
 
 ## concept-avenue.jpg
 
-保存先: `public/services/nagi-law-demo/assets/concept-avenue.jpg`
+保存先: `public/services/web-production/demo/nagi-law/assets/concept-avenue.jpg`
 
 生成プロンプト:
 
@@ -12,7 +12,7 @@
 
 ## concept-hands.jpg
 
-保存先: `public/services/nagi-law-demo/assets/concept-hands.jpg`
+保存先: `public/services/web-production/demo/nagi-law/assets/concept-hands.jpg`
 
 生成プロンプト:
 
@@ -20,7 +20,7 @@
 
 ## story-library.jpg
 
-保存先: `public/services/nagi-law-demo/assets/story-library.jpg`
+保存先: `public/services/web-production/demo/nagi-law/assets/story-library.jpg`
 
 生成プロンプト:
 
@@ -28,7 +28,7 @@
 
 ## story-potter.jpg
 
-保存先: `public/services/nagi-law-demo/assets/story-potter.jpg`
+保存先: `public/services/web-production/demo/nagi-law/assets/story-potter.jpg`
 
 生成プロンプト:
 
@@ -36,7 +36,7 @@
 
 ## journal-tea.jpg
 
-保存先: `public/services/nagi-law-demo/assets/journal-tea.jpg`
+保存先: `public/services/web-production/demo/nagi-law/assets/journal-tea.jpg`
 
 生成プロンプト:
 
@@ -44,7 +44,7 @@
 
 ## essay-water.jpg
 
-保存先: `public/services/nagi-law-demo/assets/essay-water.jpg`
+保存先: `public/services/web-production/demo/nagi-law/assets/essay-water.jpg`
 
 生成プロンプト:
 

@@ -84,7 +84,7 @@
 
 /* 凪のノートは深い紺緑に切り替え、淡い水面の写真を背景に使います。 */
 .thoughts-block{background:#193239;color:#f4f4ed;position:relative;padding:88px 0 115px;isolation:isolate;overflow:hidden}
-.thoughts-block:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(120deg,#193239f5,#193239e8),url('./assets/essay-water.jpg') center/cover}
+.thoughts-block:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(120deg,#193239f5,#193239e8),url('/services/web-production/demo/nagi-law/assets/essay-water.jpg') center/cover}
 .thoughts-inner{width:calc(100% - 160px);max-width:1160px;margin:auto}
 .thoughts-heading{display:flex;align-items:start;justify-content:space-between;gap:40px;padding-top:14px;margin-bottom:70px}
 .thoughts-heading h2{font-size:32px;margin-top:20px}.thoughts-title .nagi-label{color:#d3dfd6}.thoughts-title .nagi-label:before{background:#bdc997}

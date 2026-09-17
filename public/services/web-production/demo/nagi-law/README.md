@@ -2,8 +2,8 @@
 
 静的HTML・CSS・JavaScriptで構成した独立デモです。依存パッケージはありません。
 
-- Next.jsでのURL: `/services/nagi-law-demo/index.html`
-- ローカル確認URL: `http://127.0.0.1:4187/services/nagi-law-demo/`
+- Next.jsでのURL: `/services/web-production/demo/nagi-law/index.html`
+- ローカル確認URL: `http://127.0.0.1:4187/services/web-production/demo/nagi-law/index.html`
 - 参考サイト: https://hayakawa-lawoffice.com/ 、 https://www.hanazawa-co.com/
 - 参考にした点: 大きな写真、縦書きの言葉、明朝体、事務所の考え方と読み物を中心に据える構成。
 - 文章・名称・ロゴ・写真は新規制作。参考サイトの写真・文章・弁護士情報は転載していません。
