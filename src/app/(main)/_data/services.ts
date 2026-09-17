@@ -165,6 +165,12 @@ export const services: Service[] = [
         url: "/services/web-production/demo/creative-orbit/index.html",
       },
       {
+        title: "警備会社サンプル",
+        note: "白・赤・黒の力強い配色で、8つの事業と採用・企業情報を整理した警備会社のコーポレートサイト。",
+        image: "/services/web-production/mockups/guardia-device.png",
+        url: "/services/web-production/demo/guardia/index.html",
+      },
+      {
         title: "採用サイトサンプル",
         note: "Creative Orbitの仕事・人・カルチャーを伝え、募集職種からエントリー体験までつながる採用サイト。",
         image: "/services/web-production/mockups/creative-orbit-recruit-device.png",
