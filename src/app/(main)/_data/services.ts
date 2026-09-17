@@ -13,6 +13,14 @@ export type ServiceDemo = {
   url: string;
 };
 
+export type ServiceCase = {
+  title: string;
+  /** どんな業務を、どう支える仕組みかの一言 */
+  note: string;
+  /** ノートPC+スマホのモックアップ画像(リンクなしで一覧表示) */
+  image: string;
+};
+
 export type Service = {
   number: string;
   slug: string;
@@ -33,6 +41,8 @@ export type Service = {
   process: ServiceStep[];
   /** サービス詳細ページの「進め方」直後に表示するデモサイト一覧(任意) */
   demos?: ServiceDemo[];
+  /** サービス詳細ページの「進め方」直後に表示する開発事例(リンクなしのスライド。任意) */
+  cases?: ServiceCase[];
   idealFor: string[];
   faqs: Array<{ question: string; answer: string }>;
   related: string[];
@@ -114,6 +124,33 @@ export const services: Service[] = [
       { title: "設計", description: "必要機能と優先順位、画面、データ構造を決めます。" },
       { title: "段階開発", description: "核となる機能から実装し、実際の利用者と検証します。" },
       { title: "運用改善", description: "公開後の利用状況を確認し、改善を続けます。" },
+    ],
+    cases: [
+      {
+        title: "営業支援・顧客管理(SFA/CRM)",
+        note: "売上・案件・見込み客をひとつの画面で可視化。営業活動の記録から分析までをまとめる管理システム。",
+        image: "/services/system-development/mockups/sfa-crm.png",
+      },
+      {
+        title: "勤怠・労務管理システム",
+        note: "出退勤の打刻、シフト、各種申請と承認を一元管理。スマートフォンから打刻や申請ができる仕組み。",
+        image: "/services/system-development/mockups/attendance.png",
+      },
+      {
+        title: "EC運営管理システム",
+        note: "売上・注文・在庫アラートをリアルタイムに把握。ストア画面と管理画面を一体で構築。",
+        image: "/services/system-development/mockups/ec.png",
+      },
+      {
+        title: "SNS運用管理ツール",
+        note: "複数SNSの投稿予約、コメント対応、フォロワー分析を一元化する運用ダッシュボード。",
+        image: "/services/system-development/mockups/sns.png",
+      },
+      {
+        title: "CMS(コンテンツ管理システム)",
+        note: "ページ・ブログ・お知らせを自社で更新できる管理画面。アクセス解析やサイト状態の確認にも対応。",
+        image: "/services/system-development/mockups/cms.png",
+      },
     ],
     idealFor: ["既製品では業務に合わない", "複数ツールの情報をまとめたい", "小さく始めて段階的に開発したい"],
     faqs: [

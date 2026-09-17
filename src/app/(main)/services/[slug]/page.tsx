@@ -237,7 +237,22 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
             </h2>
             <p>架空の店舗・人物を題材に制作した提案用デモです。実際の画面をご覧いただけます。</p>
           </div>
-          <DemoShowcase demos={service.demos} />
+          <DemoShowcase items={service.demos} allHref="/services/web-production/demos" />
+        </section>
+      )}
+
+      {service.cases && service.cases.length > 0 && (
+        <section className={styles.demoSection}>
+          <div className={styles.detailSectionHeading}>
+            <p className={styles.sectionLabel}>CASE</p>
+            <h2>
+              業務に合わせた<span className={styles.serifPunct}>、</span>
+              <br />
+              開発事例。
+            </h2>
+            <p>業務の種類ごとに、管理画面とスマートフォン画面の開発イメージをご紹介します。</p>
+          </div>
+          <DemoShowcase items={service.cases} ariaLabel="開発事例のスライド操作" />
         </section>
       )}
 
