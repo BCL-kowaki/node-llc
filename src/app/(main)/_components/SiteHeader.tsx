@@ -44,9 +44,25 @@ export default function SiteHeader() {
       </Link>
 
       <nav className={styles.desktopNav} aria-label="メインナビゲーション">
-        <Link href="/#services" onClick={handleAnchorClick("services")}>
-          SERVICES
-        </Link>
+        {/* SERVICESはホバー(またはキーボードフォーカス)で各サービス詳細へのプルダウンを開く */}
+        <div className={styles.navDropdown}>
+          <Link href="/#services" onClick={handleAnchorClick("services")}>
+            SERVICES
+          </Link>
+          <div className={styles.navDropdownPanel}>
+            <ul aria-label="サービス一覧">
+              {services.map((service) => (
+                <li key={service.slug}>
+                  <Link href={`/services/${service.slug}`}>
+                    <small>{service.number}</small>
+                    <span>{service.title}</span>
+                    <b aria-hidden="true">{"↗︎"}</b>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
         <Link href="/#approach" onClick={handleAnchorClick("approach")}>
           APPROACH
         </Link>

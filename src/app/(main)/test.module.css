@@ -138,6 +138,84 @@
   transform: translateY(-2px);
 }
 
+/* SERVICES のプルダウン(ホバー/フォーカスで表示) */
+.navDropdown {
+  position: relative;
+}
+
+.navDropdownPanel {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  /* 見出しとパネルの間を透明な余白でつなぎ、カーソル移動中に閉じないようにする */
+  padding-top: 22px;
+  transform: translate(-50%, -6px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 180ms ease, transform 180ms ease, visibility 0s linear 180ms;
+}
+
+.navDropdown:hover .navDropdownPanel,
+.navDropdown:focus-within .navDropdownPanel {
+  transform: translate(-50%, 0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 180ms ease, transform 180ms ease, visibility 0s;
+}
+
+.navDropdownPanel ul {
+  width: 300px;
+  margin: 0;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 20px 48px rgba(20, 20, 20, 0.14);
+  list-style: none;
+}
+
+.desktopNav .navDropdownPanel a {
+  display: grid;
+  grid-template-columns: 30px 1fr 16px;
+  gap: 10px;
+  align-items: center;
+  padding: 11px 12px;
+  border-radius: 9px;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  transition: background 140ms ease, color 140ms ease;
+}
+
+.desktopNav .navDropdownPanel a::after {
+  content: none;
+}
+
+.desktopNav .navDropdownPanel a small {
+  font-family: var(--font-heading), sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: rgba(20, 20, 20, 0.45);
+}
+
+.desktopNav .navDropdownPanel a b {
+  font-weight: 400;
+  color: rgba(20, 20, 20, 0.35);
+  text-align: right;
+}
+
+.desktopNav .navDropdownPanel a:hover,
+.desktopNav .navDropdownPanel a:focus-visible {
+  background: var(--paper-deep);
+}
+
+.desktopNav .navDropdownPanel a:hover b {
+  color: var(--coral);
+}
+
 .mobileMenu {
   display: none;
 }
