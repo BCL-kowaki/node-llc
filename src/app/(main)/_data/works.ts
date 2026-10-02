@@ -31,8 +31,8 @@ export const works: Work[] = [
     ],
     url: "https://fuku-oka-christmas-festa.com/2026/",
     images: [
-      { src: "/work/fukuoka-christmas-festa.png", width: 370, height: 802 },
       { src: "/work/christmas-theater.png", width: 370, height: 802 },
+      { src: "/work/fukuoka-christmas-festa.png", width: 370, height: 802 },
     ],
     soft: "#ffdcdc",
     accent: "#d94343",
