@@ -62,7 +62,7 @@ export const works: Work[] = [
       "「子どもたちに忘れられないクリスマスプレゼントを」。子ども食堂を中心に、九州大学が主導し地元企業が参画して開催される、子どもたちに『体験』というプレゼントを提供し続けているイベントです。",
       "フード・フィルム・シアター・ミュージックの4つのフェスを通じて、子どもたちや単身世帯の方々が「おなかいっぱい、こころいっぱい」になれる時間を届けます。たった一度の「美味しかった」「楽しかった」が人生を変えるきっかけになる——その想いに共感し、nodeも参画企業の一社として、この取り組みを一緒に育てています。",
     ],
-    url: "https://fuku-oka-christmas-festa.com/2025/",
+    url: "https://fuku-oka-christmas-festa.com/2026/",
     images: [
       { src: "/work/fukuoka-christmas-festa.png", width: 370, height: 802 },
       { src: "/work/christmas-theater.png", width: 370, height: 802 },
