@@ -21,20 +21,21 @@ export type Work = {
 
 export const works: Work[] = [
   {
-    slug: "jelly",
-    title: "Jelly",
-    englishTitle: "BRAND & COMMUNITY",
-    tags: ["ブランドデザイン", "ECサイト", "PR活動"],
+    slug: "fukuoka-christmas-festa",
+    title: "FUKUOKA Christmas Festa",
+    englishTitle: "SOCIAL EVENT",
+    tags: ["地域イベント", "子ども支援"],
     description: [
-      "バスケットボール業界に恩返しがしたい。その想いから立ち上がった、福岡を中心とするコミュニティ構築を目的としたブランド「Jelly」です。「Minimal Wear. Fluid Identity.」を掲げ、水中をたゆたうクラゲをモチーフにしたシンボルとオリジナルの字形で、しなやかで自由なブランドの世界観をかたちにしました。",
-      "独自ECショップを開設してオリジナルブランドの販売を行うほか、地元・福岡でのイベント開催を通じて、バスケットボールを愛する人たちが集まる場をつくるPR活動を進めています。nodeはブランド設計から買い物体験づくりまでを担うメンバーとして参画し、この輪を広げていく取り組みを一緒に進めています。",
+      "「子どもたちに忘れられないクリスマスプレゼントを」。子ども食堂を中心に、九州大学が主導し地元企業が参画して開催される、子どもたちに『体験』というプレゼントを提供し続けているイベントです。",
+      "フード・フィルム・シアター・ミュージックの4つのフェスを通じて、子どもたちや単身世帯の方々が「おなかいっぱい、こころいっぱい」になれる時間を届けます。たった一度の「美味しかった」「楽しかった」が人生を変えるきっかけになる——その想いに共感し、nodeも参画企業の一社として、この取り組みを一緒に育てています。",
     ],
+    url: "https://fuku-oka-christmas-festa.com/2026/",
     images: [
-      { src: "/work/jelly.png", width: 370, height: 802 },
-      { src: "/work/jelly-ec-top.png", width: 370, height: 802 },
+      { src: "/work/fukuoka-christmas-festa.png", width: 370, height: 802 },
+      { src: "/work/christmas-theater.png", width: 370, height: 802 },
     ],
-    soft: "#e7ecf2",
-    accent: "#5f7d9c",
+    soft: "#ffdcdc",
+    accent: "#d94343",
   },
   {
     slug: "yell-basketball",
@@ -54,20 +55,19 @@ export const works: Work[] = [
     accent: "#f4713c",
   },
   {
-    slug: "fukuoka-christmas-festa",
-    title: "FUKUOKA Christmas Festa",
-    englishTitle: "SOCIAL EVENT",
-    tags: ["地域イベント", "子ども支援"],
+    slug: "jelly",
+    title: "Jelly",
+    englishTitle: "BRAND & COMMUNITY",
+    tags: ["ブランドデザイン", "ECサイト", "PR活動"],
     description: [
-      "「子どもたちに忘れられないクリスマスプレゼントを」。子ども食堂を中心に、九州大学が主導し地元企業が参画して開催される、子どもたちに『体験』というプレゼントを提供し続けているイベントです。",
-      "フード・フィルム・シアター・ミュージックの4つのフェスを通じて、子どもたちや単身世帯の方々が「おなかいっぱい、こころいっぱい」になれる時間を届けます。たった一度の「美味しかった」「楽しかった」が人生を変えるきっかけになる——その想いに共感し、nodeも参画企業の一社として、この取り組みを一緒に育てています。",
+      "バスケットボール業界に恩返しがしたい。その想いから立ち上がった、福岡を中心とするコミュニティ構築を目的としたブランド「Jelly」です。「Minimal Wear. Fluid Identity.」を掲げ、水中をたゆたうクラゲをモチーフにしたシンボルとオリジナルの字形で、しなやかで自由なブランドの世界観をかたちにしました。",
+      "独自ECショップを開設してオリジナルブランドの販売を行うほか、地元・福岡でのイベント開催を通じて、バスケットボールを愛する人たちが集まる場をつくるPR活動を進めています。nodeはブランド設計から買い物体験づくりまでを担うメンバーとして参画し、この輪を広げていく取り組みを一緒に進めています。",
     ],
-    url: "https://fuku-oka-christmas-festa.com/2026/",
     images: [
-      { src: "/work/fukuoka-christmas-festa.png", width: 370, height: 802 },
-      { src: "/work/christmas-theater.png", width: 370, height: 802 },
+      { src: "/work/jelly.png", width: 370, height: 802 },
+      { src: "/work/jelly-ec-top.png", width: 370, height: 802 },
     ],
-    soft: "#ffdcdc",
-    accent: "#d94343",
+    soft: "#e7ecf2",
+    accent: "#5f7d9c",
   },
 ];
