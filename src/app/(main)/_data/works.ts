@@ -55,7 +55,7 @@ export const works: Work[] = [
   },
   {
     slug: "fukuoka-christmas-festa",
-    title: "FUKU OKA Christmas Festa",
+    title: "FUKUOKA Christmas Festa",
     englishTitle: "SOCIAL EVENT",
     tags: ["地域イベント", "子ども支援"],
     description: [
