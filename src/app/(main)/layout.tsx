@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import WebMcpTools from "./_components/WebMcpTools";
+import { services } from "./_data/services";
 
 export const metadata: Metadata = {
   title: "node LLC | 事業と現場を、前へ。",
@@ -7,5 +9,12 @@ export const metadata: Metadata = {
 };
 
 export default function MainLayout({ children }: { children: React.ReactNode }) {
-  return children;
+  return (
+    <>
+      <WebMcpTools
+        services={services.map(({ slug, title, cardCopy }) => ({ slug, title, summary: cardCopy }))}
+      />
+      {children}
+    </>
+  );
 }

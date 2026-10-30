@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "node-llc-site",
+      "type": "skill-md",
+      "description": "合同会社nodeのサービス内容、会社情報、お知らせを調べ、問い合わせ先を案内するときに使う。",
+      "url": "https://node-llc.com/.well-known/agent-skills/node-llc-site/SKILL.md",
+      "digest": "sha256:2396e281b78cca876342b5a4f7b4736ae3cba4e11fd2f39a556778b6b7b093db"
+    }
+  ]
+}

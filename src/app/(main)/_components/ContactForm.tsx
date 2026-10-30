@@ -3,6 +3,13 @@
 import { useState, type FormEvent } from "react";
 import styles from "../test.module.css";
 
+// WebMCP の宣言的API用の属性(Reactの型定義に未収録のため別定義にする)。
+// toolautosubmit は付けず、送信ボタンは利用者本人が押す
+const WEB_MCP_FORM_ATTRIBUTES = {
+  toolname: "contact_node_llc",
+  tooldescription: "合同会社nodeへのお問い合わせフォームに入力します。",
+};
+
 // 本番トップのお問い合わせと同じGAS(Google Apps Script)エンドポイントへ送信する
 const GAS_URL = process.env.NEXT_PUBLIC_GAS_URL || "";
 
@@ -36,7 +43,7 @@ export default function ContactForm() {
   };
 
   return (
-    <form className={styles.contactForm} onSubmit={handleSubmit}>
+    <form className={styles.contactForm} onSubmit={handleSubmit} {...WEB_MCP_FORM_ATTRIBUTES}>
       <label className={styles.formField}>
         <span>
           お名前<b>必須</b>
@@ -44,6 +51,7 @@ export default function ContactForm() {
         <input
           type="text"
           name="name"
+          {...{ toolparamdescription: "問い合わせる方のお名前" }}
           autoComplete="name"
           required
           value={formData.name}
@@ -55,6 +63,7 @@ export default function ContactForm() {
         <input
           type="text"
           name="nameKana"
+          {...{ toolparamdescription: "お名前のふりがな" }}
           value={formData.nameKana}
           onChange={(e) => setFormData({ ...formData, nameKana: e.target.value })}
         />
@@ -66,6 +75,7 @@ export default function ContactForm() {
         <input
           type="email"
           name="email"
+          {...{ toolparamdescription: "返信先のメールアドレス" }}
           autoComplete="email"
           required
           value={formData.email}
@@ -78,6 +88,7 @@ export default function ContactForm() {
         </span>
         <textarea
           name="message"
+          {...{ toolparamdescription: "お問い合わせ内容" }}
           required
           value={formData.message}
           onChange={(e) => setFormData({ ...formData, message: e.target.value })}

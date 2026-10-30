@@ -1,0 +1,20 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "合同会社node",
+    "identifier": "did:web:node-llc.com"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:node-llc.com:skills:node-llc-site",
+      "displayName": "合同会社node 公式サイトの使い方",
+      "type": "text/markdown",
+      "url": "https://node-llc.com/.well-known/agent-skills/node-llc-site/SKILL.md",
+      "representativeQueries": [
+        "合同会社nodeのサービス内容を知りたい",
+        "福岡でAI導入を伴走支援してくれる会社を探している",
+        "合同会社nodeへの問い合わせ方法を知りたい"
+      ]
+    }
+  ]
+}
