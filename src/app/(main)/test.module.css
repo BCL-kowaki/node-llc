@@ -281,8 +281,8 @@
 
 .hero h1 {
   margin: 0;
-  /* メインビジュアルの見出しサイズ(PC 72px / スマホは800px以下で44px) */
-  font-size: 72px;
+  /* メインビジュアルの見出しサイズ(PC 48px / スマホは800px以下で36px) */
+  font-size: 48px;
   font-weight: 800;
   letter-spacing: -0.085em;
   line-height: 0.95;
@@ -290,6 +290,8 @@
 
 .hero h1 span {
   color: var(--coral);
+  /* 「その先へ。」を語の途中で改行させない */
+  white-space: nowrap;
 }
 
 /* 見出し内の読点「、」は明朝体で表示する */
@@ -2218,7 +2220,7 @@
   }
 
   .hero h1 {
-    font-size: 44px;
+    font-size: 36px;
   }
 
   .lead {
@@ -3187,5 +3189,20 @@
 @keyframes orbitDot {
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* メインビジュアルの見出し: PCは2行、スマホは4行で固定する */
+.hero h1 {
+  line-height: 1.2;
+}
+
+.hero h1 .heroSpBreak {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .site .hero h1 br {
+    display: inline;
   }
 }

@@ -107,7 +107,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
             <p className={styles.detailLead}>{service.lead}</p>
             <p className={styles.detailDescription}>{service.description}</p>
             <AnchorButton id="service-contact" className={styles.detailButton}>
-              このサービスについて相談する
+              このサービスの丸投げを相談する
               <span aria-hidden="true">{"↘\uFE0E"}</span>
             </AnchorButton>
           </div>
@@ -169,7 +169,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
       <section className={styles.supportSection}>
         <div className={styles.detailSectionHeading}>
           <p className={styles.sectionLabel}>SUPPORT</p>
-          <h2>nodeが支援すること。</h2>
+          <h2>nodeが引き受けること。</h2>
         </div>
         <div className={styles.supportGrid}>
           {service.supports.map((support, index) => (
@@ -193,7 +193,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
             <br />
             必要な順番で。
           </h2>
-          <p>目的と現状に合わせ、以下を組み合わせて支援範囲を設計します。</p>
+          <p>目的と現状に合わせ、以下を組み合わせて、nodeが担当範囲を設計します。</p>
         </div>
         <ol>
           {service.deliverables.map((deliverable, index) => (
@@ -210,7 +210,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
         <div className={styles.detailSectionHeading}>
           <p className={styles.sectionLabel}>PROCESS</p>
           <h2>進め方。</h2>
-          <p>状況に応じて前後しながら、小さな確認を重ねて進めます。</p>
+          <p>状況に応じて前後しながら、要所でご確認いただくだけで進めます。</p>
         </div>
         <ol className={styles.detailProcessList}>
           {service.process.map((step, index) => (
@@ -290,7 +290,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
       <section className={styles.relatedSection}>
         <div className={styles.detailSectionHeading}>
           <p className={styles.sectionLabel}>RELATED SERVICES</p>
-          <h2>組み合わせて<span className={styles.serifPunct}>、</span>もっと前へ。</h2>
+          <h2>あわせて<span className={styles.serifPunct}>、</span>丸ごと任せる。</h2>
         </div>
         <div className={styles.relatedGrid}>
           {relatedServices.map((relatedService) => (

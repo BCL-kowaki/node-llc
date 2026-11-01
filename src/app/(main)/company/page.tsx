@@ -33,7 +33,7 @@ export default function CompanyPage() {
         <p className={styles.detailEnglish}>COMPANY</p>
         <h1>会社概要</h1>
         <p className={styles.detailLead}>
-          事業と現場を、前へ。福岡から、全国へ。
+          その課題、丸投げで。福岡から、全国へ。
         </p>
       </section>
 
@@ -65,7 +65,7 @@ export default function CompanyPage() {
             Web制作、広告運用、動画、社内システム、AI活用。10年以上デジタルの現場で手を動かし、100名規模の組織マネジメントとKPI設計にも向き合ってきました。
           </p>
           <p>
-            だからnodeは、技術だけでも、提案だけでも終わりません。お客様と同じ目標を見て、現場で使われ、結果につながるところまで一緒に進みます。
+            だからnodeは、技術だけでも、提案だけでも終わりません。お客様と同じ目標を見て、現場で使われ、結果につながるところまでまとめて引き受けます。
           </p>
           <NoteBanner />
         </div>

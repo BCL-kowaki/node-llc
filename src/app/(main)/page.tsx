@@ -17,29 +17,29 @@ const approachItems = [
     title: "現場から考える",
     english: "DISCOVER",
     icon: faMagnifyingGlass,
-    description: "資料だけで判断せず、実際の業務と顧客の行動を見て、解くべき課題を見つけます。",
+    description: "資料をそろえていただく必要はありません。nodeが現場に入り、業務と顧客の行動を見て、解くべき課題を見つけます。",
   },
   {
     number: "02",
     title: "つくって確かめる",
     english: "BUILD",
     icon: faCubes,
-    description: "大きな計画を待つより、検証できる最小単位をつくり、現場の反応から学びます。",
+    description: "細かな指示はいりません。nodeが検証できる最小単位をつくり、現場の反応を見て次の手を決めます。",
   },
   {
     number: "03",
     title: "運用で育てる",
     english: "GROW",
     icon: faArrowTrendUp,
-    description: "公開や導入をゴールにせず、数字と声を見ながら、成果が続く仕組みへ改善します。",
+    description: "公開や導入のあとも手を離しません。数字と声を見ながら、成果が続く仕組みへnodeが改善を続けます。",
   },
 ];
 
 const flow = [
-  { step: "LISTEN", title: "相談・ヒアリング", text: "目標、現状、困っていることを、言葉になっていない部分も含めて伺います。" },
-  { step: "DEFINE", title: "課題とゴールを定義", text: "誰の、どの行動を、どう変えるか。成果指標と優先順位を揃えます。" },
-  { step: "MAKE", title: "制作・実装・検証", text: "必要なものから形にし、利用者の反応とデータで仮説を確かめます。" },
-  { step: "IMPROVE", title: "運用・改善", text: "日々の業務へ組み込み、振り返りながら次の改善を進めます。" },
+  { step: "LISTEN", title: "相談・ヒアリング", text: "目標も現状も、整理できていなくて構いません。困っていることをそのままお話しください。" },
+  { step: "DEFINE", title: "課題とゴールを定義", text: "誰の、どの行動を、どう変えるか。成果指標と優先順位の案はnodeがつくります。" },
+  { step: "MAKE", title: "制作・実装・検証", text: "必要なものからnodeが形にし、利用者の反応とデータで仮説を確かめます。" },
+  { step: "IMPROVE", title: "運用・改善", text: "日々の業務への組み込みも、次の改善もnodeが進めます。" },
 ];
 
 export default function TestHomePage() {
@@ -56,16 +56,20 @@ export default function TestHomePage() {
         <div className={styles.heroCopy}>
           <p className={styles.eyebrow}>DESIGN. BUILD. GROW.</p>
           <h1>
-            事業と現場を<span className={styles.serifPunct}>、</span>
+            面倒な課題は
+            <br className={styles.heroSpBreak} />
+            すべて丸投げで。
             <br />
-            <span>前へ。</span>
+            あなたの事業は
+            <br className={styles.heroSpBreak} />
+            <span>その先へ。</span>
           </h1>
           <p className={styles.lead}>
-            つくって、納品して、終わり。そんな支援はしません。
+            何を頼めばいいか分からなくても、大丈夫です。
             <br />
-            現場で課題の根っこを見つけ、かたちにして、数字が動くまで磨き続ける。
+            課題の整理から制作、開発、運用まで、nodeがまとめて引き受けます。
             <br />
-            nodeは、成果が出るまで隣を走り続ける伴走パートナーです。
+            「あとはお願い」のひと言から、数字が動くまで走り続けます。
           </p>
           <AnchorButton id="services" className={styles.primaryButton}>
             OUR SERVICES
@@ -91,7 +95,7 @@ export default function TestHomePage() {
               手段はそろっているのに、なぜか成果につながらない。その原因の多くは、それぞれが「点」のまま、ばらばらに動いていることにあります。途切れた場所で、顧客の熱も、現場の意欲も冷めていきます。
             </p>
             <p>
-              nodeは、事業のゴールから逆算して手段を選び、集客から受注、業務、改善までをひとつの流れに束ねます。一本の線でつながった仕組みは、成果を「偶然」から「再現できるもの」に変えます。
+              nodeにお任せいただければ、事業のゴールから逆算して手段を選び、集客から受注、業務、改善までをひとつの流れに束ねます。一本の線でつながった仕組みは、成果を「偶然」から「再現できるもの」に変えます。
             </p>
           </div>
         </div>
@@ -102,12 +106,12 @@ export default function TestHomePage() {
           <p className={styles.sectionLabel}>SERVICES</p>
           <div>
             <h2>
-              領域をまたいで<span className={styles.serifPunct}>、</span>
+              どの領域も<span className={styles.serifPunct}>、</span>
               <br />
-              課題を解く。
+              まとめて丸投げ。
             </h2>
             <p>
-              サイトは制作会社へ、広告は代理店へ、システムは開発会社へ。分業の境目を越えるたび、意図は少しずつ薄れていきます。nodeは企画から制作・開発・運用までをひとつのチームで担い、境目で失われていた成果を取り戻します。
+              サイトは制作会社へ、広告は代理店へ、システムは開発会社へ。分業の境目を越えるたび、意図は少しずつ薄れ、調整の手間はお客様に残ります。nodeは企画から制作・開発・運用までをひとつのチームで引き受けるので、窓口はひとつで済みます。
             </p>
           </div>
         </div>
@@ -147,7 +151,7 @@ export default function TestHomePage() {
               短くする。
             </h2>
             <p>
-              立派な企画書より、現場で確かめた小さな事実。nodeは仮説と検証を短いサイクルで回し、確かめながら最短距離で成果に近づきます。
+              立派な企画書も、細かな指示書もいりません。nodeが仮説と検証を短いサイクルで回し、確かめながら最短距離で成果に近づきます。
             </p>
           </div>
         </div>
@@ -177,7 +181,7 @@ export default function TestHomePage() {
             つくる。育てる。
           </h2>
           <p>
-            決まりきったパッケージに当てはめることはしません。目的と状況に合わせて工程を組み替えながら、最初のご相談から公開後の改善まで、一つの流れで隣を走ります。
+            お客様にお願いするのは、最初のご相談と要所でのご判断だけです。目的と状況に合わせて工程を組み替えながら、公開後の改善までnodeが進めます。
           </p>
         </div>
         <ol className={styles.flowList}>

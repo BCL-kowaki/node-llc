@@ -21,7 +21,7 @@ const mPlus1p = M_PLUS_1p({
 export const metadata: Metadata = {
   title: "合同会社node - FDE型AI実装パートナー",
   description:
-    "顧客の現場に入り込み、生成AI・LLM・AIエージェントを業務成果につなげるFDE型AI実装パートナー。企画、開発、運用、定着まで一気通貫で伴走します。",
+    "顧客の現場に入り込み、生成AI・LLM・AIエージェントを業務成果につなげるFDE型AI実装パートナー。企画、開発、運用、定着までまとめて引き受けます。",
 };
 
 export default function RootLayout({

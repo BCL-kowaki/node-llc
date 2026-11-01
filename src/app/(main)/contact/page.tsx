@@ -27,13 +27,13 @@ export default function ContactPage() {
         </div>
         <p className={styles.detailEnglish}>CONTACT</p>
         <h1>お問い合わせ</h1>
-        <p className={styles.detailLead}>まずは、現場の話からお聞かせください。</p>
+        <p className={styles.detailLead}>まずは、困っていることをそのままお送りください。</p>
       </section>
 
       <section className={styles.contactPageBody}>
         <div className={styles.contactIntro}>
           <p>
-            「何を頼めばいいか分からない」という段階で構いません。要件書も企画書も不要です。現状をお聞かせいただければ、課題の整理から、効果の出やすい最初の一歩までご提案します。
+            「何を頼めばいいか分からない」という段階で構いません。要件書も企画書も不要です。現状をお聞かせいただければ、課題の整理から実行まで、nodeが引き受けます。
           </p>
           <p>
             サービス内容のご質問、お見積もり、協業のご相談など、どんな内容でもお気軽にどうぞ。

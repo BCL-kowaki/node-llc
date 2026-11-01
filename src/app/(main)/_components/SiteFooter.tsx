@@ -20,7 +20,7 @@ export default function SiteFooter() {
             />
           </Link>
           <p>
-            事業と現場を、前へ。
+            その課題、丸投げで。
             <br />
             福岡から、全国へ。
           </p>
