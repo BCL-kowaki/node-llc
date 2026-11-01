@@ -99,7 +99,7 @@ export default function CompanyPage() {
             <dt>事業内容</dt>
             <dd>
               FDE型AI実装支援 / AIエージェント開発 / 業務フロー再設計 / AI研修・定着支援 /
-              Web制作・広告運用 / Webマーケティング・コンサルティング
+              システム開発 / Web制作・広告運用 / LINE構築 / 動画制作 / Webマーケティング・コンサルティング
             </dd>
           </div>
         </dl>

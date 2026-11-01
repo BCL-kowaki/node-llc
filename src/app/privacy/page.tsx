@@ -33,37 +33,37 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-white font-bold text-lg mb-4">1. 個人情報の取得について</h2>
             <p>
-              当社は、お問い合わせフォーム等を通じて、
+              当社はお問い合わせフォーム等を通じて、
               お名前、メールアドレス、電話番号等の個人情報を取得することがあります。
               また、SNS広告等の広告媒体（Google、Facebook、Instagram等）を通じて、
               お名前、メールアドレス、電話番号、会社名等の情報を取得する場合があります。
-              個人情報の取得は、適正かつ公正な手段により行います。
+              個人情報の取得は適正かつ公正な手段により行います。
             </p>
           </section>
 
           <section>
             <h2 className="text-white font-bold text-lg mb-4">2. 個人情報の利用目的</h2>
-            <p>当社は、取得した個人情報を以下の目的で利用いたします。</p>
+            <p>当社は取得した個人情報を以下の目的で利用いたします。</p>
             <ul className="list-disc list-inside mt-3 space-y-1">
               <li>お問い合わせへの回答・対応</li>
               <li>当社サービスに関する情報のご案内</li>
-              <li>コスト削減診断のご案内、および電話等によるご案内・ご説明のため</li>
-              <li>サービスの提供・改善のため</li>
-              <li>契約の履行・管理のため</li>
+              <li>コスト削減診断のご案内、および電話等によるご案内・ご説明</li>
+              <li>サービスの提供・改善</li>
+              <li>契約の履行・管理</li>
             </ul>
           </section>
 
           <section>
             <h2 className="text-white font-bold text-lg mb-4">3. 個人情報の第三者提供</h2>
             <p>
-              当社は、法令に基づく場合を除き、ご本人の同意なく個人情報を第三者に提供することはありません。
+              当社は法令に基づく場合を除き、ご本人の同意なく個人情報を第三者に提供することはありません。
             </p>
           </section>
 
           <section>
             <h2 className="text-white font-bold text-lg mb-4">4. 個人情報の安全管理</h2>
             <p>
-              当社は、個人情報の漏洩、滅失、毀損等を防止するために、
+              当社は個人情報の漏洩、滅失、毀損等を防止するために、
               適切なセキュリティ対策を講じ、個人情報の安全管理に努めます。
             </p>
           </section>
@@ -89,7 +89,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-white font-bold text-lg mb-4">7. プライバシーポリシーの変更</h2>
             <p>
-              当社は、必要に応じて本ポリシーを変更することがあります。
+              当社は必要に応じて本ポリシーを変更することがあります。
               変更後のプライバシーポリシーは、当ウェブサイトに掲載した時点で効力を生じるものとします。
             </p>
           </section>

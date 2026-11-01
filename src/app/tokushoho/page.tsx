@@ -73,11 +73,7 @@ export default function TokushohoPage() {
               販売価格
             </dt>
             <dd className="text-white text-base">
-              各サービスページに記載の価格に準じます。
-              <br />
-              <span className="text-white/50 text-sm">
-                ※案件内容に応じて個別にお見積りいたします。
-              </span>
+              案件内容に応じて個別にお見積りいたします。
             </dd>
           </div>
 
