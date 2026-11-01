@@ -31,7 +31,11 @@ export default function ParticipationPage() {
           <span>PARTICIPATION</span>
         </div>
         <p className={styles.detailEnglish}>PARTICIPATION</p>
-        <h1>参画プロジェクト</h1>
+        <h1>
+          参画
+          <br className={styles.spBreak} />
+          プロジェクト
+        </h1>
         <p className={styles.detailLead}>
           nodeがチームの一員として参画し、いま一緒に前へ進めているプロジェクトです。
         </p>

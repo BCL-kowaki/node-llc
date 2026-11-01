@@ -1261,7 +1261,7 @@
 .detailHero h1 {
   max-width: 820px;
   margin: auto 0 28px;
-  /* トップページのh1に合わせる(PC 72px / スマホは800px以下で44px) */
+  /* トップページのh1に合わせる(PC 72px / スマホは800px以下で36px) */
   font-size: 72px;
   font-weight: 800;
 }
@@ -2473,17 +2473,18 @@
   }
 
   .detailHero h1 {
-    font-size: 44px;
+    font-size: 36px;
   }
 
-  /* スマホでは見出しの強制改行をやめ、画面幅に合わせて自然に折り返す */
-  .site h1 br,
-  .site h2 br {
-    display: none;
+  /* スマホの見出しは語の途中で切らず、文節の切れ目で折り返す(対応ブラウザのみ) */
+  .site h1,
+  .site h2 {
+    word-break: auto-phrase;
   }
 
+  /* サービス名は「FDE伴走/パートナー」のような区切りごとに折り返す */
   .detailHero h1 span {
-    display: inline;
+    display: inline-block;
   }
 
   .detailHeroGrid > .serviceVisual {
@@ -3192,17 +3193,18 @@
   }
 }
 
-/* メインビジュアルの見出し: PCは2行、スマホは4行で固定する */
+/* メインビジュアルの見出しの行間 */
 .hero h1 {
   line-height: 1.2;
 }
 
-.hero h1 .heroSpBreak {
+/* スマホでだけ有効にする見出しの改行 */
+.spBreak {
   display: none;
 }
 
 @media (max-width: 800px) {
-  .site .hero h1 br {
+  .spBreak {
     display: inline;
   }
 }

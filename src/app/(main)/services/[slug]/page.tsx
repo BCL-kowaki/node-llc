@@ -134,7 +134,9 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
           <h2>
             手段ではなく<span className={styles.serifPunct}>、</span>
             <br />
-            変化から設計する。
+            変化から
+            <br className={styles.spBreak} />
+            設計する。
           </h2>
           {/* トップページのサービスカードと同じビジュアル
               (PCは左カラム、スマホは見出しの下に表示) */}
@@ -154,7 +156,11 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
       <section className={styles.painSection}>
         <div className={styles.detailSectionHeading}>
           <p className={styles.sectionLabel}>COMMON CHALLENGES</p>
-          <h2>こんな課題はありませんか。</h2>
+          <h2>
+            こんな課題は
+            <br className={styles.spBreak} />
+            ありませんか。
+          </h2>
         </div>
         <ul className={styles.painList}>
           {service.pains.map((pain, index) => (
@@ -169,7 +175,11 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
       <section className={styles.supportSection}>
         <div className={styles.detailSectionHeading}>
           <p className={styles.sectionLabel}>SUPPORT</p>
-          <h2>nodeが引き受けること。</h2>
+          <h2>
+            nodeが
+            <br className={styles.spBreak} />
+            引き受けること。
+          </h2>
         </div>
         <div className={styles.supportGrid}>
           {service.supports.map((support, index) => (
@@ -210,7 +220,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
         <div className={styles.detailSectionHeading}>
           <p className={styles.sectionLabel}>PROCESS</p>
           <h2>進め方。</h2>
-          <p>状況に応じて前後しながら、要所でご確認いただくだけで進めます。</p>
+          <p>状況に応じて工程を前後させながら、お客様には要所でご確認いただくだけで進めます。</p>
         </div>
         <ol className={styles.detailProcessList}>
           {service.process.map((step, index) => (
@@ -235,7 +245,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
               <br />
               デモサイト。
             </h2>
-            <p>架空の店舗・人物を題材に制作した提案用デモです。実際の画面をご覧いただけます。</p>
+            <p>架空の会社・店舗・人物を題材に制作した提案用デモです。実際の画面をご覧いただけます。</p>
           </div>
           <DemoShowcase items={service.demos} allHref="/services/web-production/demos" />
         </section>
@@ -290,7 +300,11 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
       <section className={styles.relatedSection}>
         <div className={styles.detailSectionHeading}>
           <p className={styles.sectionLabel}>RELATED SERVICES</p>
-          <h2>あわせて<span className={styles.serifPunct}>、</span>丸ごと任せる。</h2>
+          <h2>
+            あわせて<span className={styles.serifPunct}>、</span>
+            <br className={styles.spBreak} />
+            丸ごと任せる。
+          </h2>
         </div>
         <div className={styles.relatedGrid}>
           {relatedServices.map((relatedService) => (

@@ -24,14 +24,14 @@ const approachItems = [
     title: "つくって確かめる",
     english: "BUILD",
     icon: faCubes,
-    description: "細かな指示はいりません。nodeが検証できる最小単位をつくり、現場の反応を見て次の手を決めます。",
+    description: "細かな指示はいりません。検証できる最小単位をnodeがつくり、現場の反応を見て次の手を決めます。",
   },
   {
     number: "03",
     title: "運用で育てる",
     english: "GROW",
     icon: faArrowTrendUp,
-    description: "公開や導入のあとも手を離しません。数字と声を見ながら、成果が続く仕組みへnodeが改善を続けます。",
+    description: "公開や導入のあとも手を離しません。数字と声を見ながら、成果が続く仕組みになるよう、nodeが改善を続けます。",
   },
 ];
 
@@ -57,11 +57,11 @@ export default function TestHomePage() {
           <p className={styles.eyebrow}>DESIGN. BUILD. GROW.</p>
           <h1>
             面倒な課題は
-            <br className={styles.heroSpBreak} />
+            <br className={styles.spBreak} />
             すべて丸投げで。
             <br />
             あなたの事業は
-            <br className={styles.heroSpBreak} />
+            <br className={styles.spBreak} />
             <span>その先へ。</span>
           </h1>
           <p className={styles.lead}>
@@ -146,7 +146,9 @@ export default function TestHomePage() {
           <p className={styles.sectionLabel}>OUR APPROACH</p>
           <div>
             <h2>
-              成果までの距離を<span className={styles.serifPunct}>、</span>
+              成果までの
+              <br className={styles.spBreak} />
+              距離を<span className={styles.serifPunct}>、</span>
               <br />
               短くする。
             </h2>

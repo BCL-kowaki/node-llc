@@ -8,7 +8,9 @@ export default function ContactCta() {
       <p className={styles.sectionLabel}>CONTACT</p>
       <div className={styles.contactCtaBody}>
         <h2>
-          まとまっていない課題も<span className={styles.serifPunct}>、</span>
+          まとまっていない
+          <br className={styles.spBreak} />
+          課題も<span className={styles.serifPunct}>、</span>
           <br />
           そのまま丸投げで。
         </h2>
