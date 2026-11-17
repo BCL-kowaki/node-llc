@@ -13,6 +13,18 @@ const WEB_MCP_FORM_ATTRIBUTES = {
 // 本番トップのお問い合わせと同じGAS(Google Apps Script)エンドポイントへ送信する
 const GAS_URL = process.env.NEXT_PUBLIC_GAS_URL || "";
 
+// layout.tsx で読み込む GA4(gtag.js)の関数。広告ブロック等で未読み込みの場合もある
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
+// 問い合わせ送信をGA4の推奨イベント generate_lead として記録する(個人情報は送らない)
+function trackLead() {
+  window.gtag?.("event", "generate_lead", { form_id: "contact" });
+}
+
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
@@ -36,6 +48,7 @@ export default function ContactForm() {
       });
       // no-corsのためレスポンスは読めないが、例外がなければ送信成功とみなす
       setStatus("sent");
+      trackLead();
       setFormData({ name: "", nameKana: "", email: "", message: "" });
     } catch {
       setStatus("error");
