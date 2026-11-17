@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
     return {};
   }
 
-  const title = `${service.title} | 合同会社node`;
+  const title = service.seoTitle ?? `${service.title} | 合同会社node`;
 
   return {
     title,
