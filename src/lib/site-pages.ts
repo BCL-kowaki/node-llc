@@ -17,6 +17,7 @@ export function getSitePages(): SitePage[] {
     { path: "/company" },
     { path: "/contact" },
     { path: "/participation" },
+    { path: "/price" },
     { path: "/privacy" },
     { path: "/tokushoho" },
     { path: "/services/web-production/demos" },

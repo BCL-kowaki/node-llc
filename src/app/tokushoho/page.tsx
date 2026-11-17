@@ -73,7 +73,7 @@ export default function TokushohoPage() {
               販売価格
             </dt>
             <dd className="text-white text-base">
-              案件内容に応じて個別にお見積りいたします。
+              料金の目安は料金ページ（https://node-llc.com/price）に記載しています。正式な金額は、案件内容に応じて個別にお見積りいたします。
             </dd>
           </div>
 

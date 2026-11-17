@@ -66,6 +66,7 @@ export default function SiteHeader() {
         <Link href="/#approach" onClick={handleAnchorClick("approach")}>
           APPROACH
         </Link>
+        <Link href="/price">PRICE</Link>
         <Link href="/participation">PARTICIPATION</Link>
         <Link href="/company">COMPANY</Link>
         <Link href="/news">NEWS</Link>
@@ -96,6 +97,7 @@ export default function SiteHeader() {
                 {service.title}
               </Link>
             ))}
+            <Link href="/price">PRICE</Link>
             <Link href="/news">NEWS</Link>
             <Link href="/participation">PARTICIPATION</Link>
             <Link href="/company">ABOUT</Link>

@@ -21,6 +21,13 @@ export type ServiceCase = {
   image: string;
 };
 
+/** 料金の目安(税別)。amount が "ASK" の項目は個別見積もりとして表示する */
+export type ServicePrice = {
+  label: string;
+  amount: string;
+  note?: string;
+};
+
 export type Service = {
   number: string;
   slug: string;
@@ -47,6 +54,8 @@ export type Service = {
   cases?: ServiceCase[];
   idealFor: string[];
   faqs: Array<{ question: string; answer: string }>;
+  /** 料金ページとサービス詳細に表示する料金の目安 */
+  prices: ServicePrice[];
   related: string[];
 };
 
@@ -91,6 +100,7 @@ export const services: Service[] = [
       { question: "既存システムを残したまま進められますか？", answer: "既存環境を確認し、置き換え・連携・部分改善のどれが適切かを整理します。" },
       { question: "どのくらいの期間を想定すればよいですか？", answer: "課題により異なりますが、まず小さな検証単位を設け、その結果から次の期間と範囲を設計します。" },
     ],
+    prices: [{ label: "伴走支援", amount: "ASK", note: "関わり方と期間をうかがってお見積もりします。" }],
     related: ["system-development", "ai-enablement"],
   },
   {
@@ -160,6 +170,7 @@ export const services: Service[] = [
       { question: "既存サービスとの連携は可能ですか？", answer: "対象サービスが提供する連携方法を確認し、実現性と安全性を整理したうえで提案します。" },
       { question: "公開後の保守もお願いできますか？", answer: "監視、障害対応、機能改善など、システムに必要な保守範囲を個別に設計します。" },
     ],
+    prices: [{ label: "システム開発", amount: "ASK", note: "必要な機能と規模をうかがってお見積もりします。" }],
     related: ["fde-partner", "ai-enablement"],
   },
   {
@@ -252,6 +263,10 @@ export const services: Service[] = [
       { question: "今あるサイトの一部改修も可能ですか？", answer: "可能です。現状の構成と技術を確認し、全面改修と部分改善の効果・費用を比較します。" },
       { question: "スマートフォンにも対応しますか？", answer: "標準で端末幅に応じた表示を設計し、主要画面の操作性を確認します。" },
     ],
+    prices: [
+      { label: "WEBサイト制作", amount: "10万円〜" },
+      { label: "LP（1ページ）", amount: "10万円〜" },
+    ],
     related: ["advertising-operations", "video-production"],
   },
   {
@@ -293,6 +308,13 @@ export const services: Service[] = [
       { question: "どの広告媒体に対応していますか？", answer: "商材と顧客層を確認し、主要な検索広告・SNS広告から適切な媒体を選定します。" },
       { question: "少額予算でも相談できますか？", answer: "目的と検証したい仮説を確認し、意味のある検証が可能な範囲を提案します。" },
       { question: "広告素材の制作も依頼できますか？", answer: "Webサイト・動画制作と連携し、広告文、静止画、動画、LPの改善まで対応できます。" },
+    ],
+    prices: [
+      {
+        label: "広告運用代行",
+        amount: "月5万円〜",
+        note: "手数料は広告費の20%（最低月5万円）です。広告費は別にかかります。",
+      },
     ],
     related: ["web-production", "video-production"],
   },
@@ -373,7 +395,7 @@ export const services: Service[] = [
       {
         question: "費用はどのくらいかかりますか？",
         answer:
-          "ソフトウェアの利用料は0円です。ただし、LINE公式アカウントの配信料金、自社環境に置く場合のCloudflareの利用料、独自ドメインなどは別にかかります。nodeの導入支援の費用は、設置方式と設定する範囲をうかがったうえでお見積もりします。",
+          "ソフトウェアの利用料は0円です。ただし、LINE公式アカウントの配信料金、自社環境に置く場合のCloudflareの利用料、独自ドメインなどは別にかかります。nodeの導入支援は5万円〜（税別）で、設置方式と設定する範囲をうかがったうえで正式にお見積もりします。",
       },
       {
         question: "クラウド版と自社環境への設置は、どちらがよいですか？",
@@ -389,6 +411,13 @@ export const services: Service[] = [
         question: "導入後のアップデートや保守も頼めますか？",
         answer:
           "はい。L Harnessは更新が活発で、データベースの移行が必要になる更新もあります。動作確認を含めた更新作業と、日々の運用のご相談を継続支援としてお受けします。",
+      },
+    ],
+    prices: [
+      {
+        label: "LINEハーネス導入",
+        amount: "5万円〜",
+        note: "LINE公式アカウントの配信料金やCloudflareの利用料は別にかかります。",
       },
     ],
     related: ["system-development", "advertising-operations"],
@@ -433,6 +462,7 @@ export const services: Service[] = [
       { question: "縦型動画にも対応できますか？", answer: "掲載する媒体に合わせ、縦・横・正方形など必要な比率と尺で制作できます。" },
       { question: "企画段階から相談できますか？", answer: "はい。むしろ目的と活用場所の整理から始めることで、制作後に使いやすい動画になります。" },
     ],
+    prices: [{ label: "動画制作", amount: "1本2万円〜" }],
     related: ["web-production", "advertising-operations"],
   },
   {
@@ -474,6 +504,10 @@ export const services: Service[] = [
       { question: "利用するAIサービスが決まっていなくても大丈夫ですか？", answer: "はい。業務と必要条件を先に整理し、その後に適切な手段を比較します。" },
       { question: "研修だけでも依頼できますか？", answer: "可能です。一般論だけでなく、実際の業務を題材にした内容へ調整します。" },
       { question: "出力ミスへの対策はできますか？", answer: "用途に応じて、参照データ、確認工程、利用範囲、ログなど複数の対策を組み合わせます。" },
+    ],
+    prices: [
+      { label: "AI研修", amount: "半日5万円〜" },
+      { label: "伴走支援", amount: "ASK", note: "対象の業務と期間をうかがってお見積もりします。" },
     ],
     related: ["fde-partner", "system-development"],
   },

@@ -37,6 +37,7 @@ export default function SiteFooter() {
           <div>
             <p>COMPANY</p>
             <Link href="/company">会社情報</Link>
+            <Link href="/price">料金</Link>
             <Link href="/participation">参画プロジェクト</Link>
             <Link href="/news">お知らせ</Link>
             <Link href="/contact">お問い合わせ</Link>

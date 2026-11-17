@@ -106,6 +106,19 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
             </h1>
             <p className={styles.detailLead}>{service.lead}</p>
             <p className={styles.detailDescription}>{service.description}</p>
+            {/* 料金の目安(税別)。詳細と注意書きは料金ページにまとめる */}
+            <p className={styles.detailPrice}>
+              <span>PRICE</span>
+              {service.prices.map((price) => (
+                <span key={price.label}>
+                  {service.prices.length > 1 && <small>{price.label} </small>}
+                  <strong>{price.amount === "ASK" ? "ASK" : price.amount}</strong>
+                  {price.amount === "ASK" && <small>（個別お見積もり）</small>}
+                </span>
+              ))}
+              <small>税別</small>
+              <Link href="/price">料金一覧を見る {"↗︎"}</Link>
+            </p>
             <AnchorButton id="service-contact" className={styles.detailButton}>
               このサービスの丸投げを相談する
               <span aria-hidden="true">{"↘\uFE0E"}</span>

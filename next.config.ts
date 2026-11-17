@@ -5,6 +5,7 @@ const MARKDOWN_PAGE_SOURCES = [
   "/company",
   "/contact",
   "/participation",
+  "/price",
   "/privacy",
   "/tokushoho",
   "/services/:slug",
